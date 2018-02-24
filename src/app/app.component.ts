@@ -3,10 +3,10 @@ import { Platform } from 'ionic-angular'
 import { StatusBar } from '@ionic-native/status-bar'
 import { SplashScreen } from '@ionic-native/splash-screen'
 
-import { TabsComponent } from '../pages/tabs/tabs'
+import { TabsComponent } from '../pages/tabs/tabs.component'
 
 @Component({
-    templateUrl: 'app.html'
+    templateUrl: 'app.component.html'
 })
 export class AppComponent {
     rootPage: any = TabsComponent

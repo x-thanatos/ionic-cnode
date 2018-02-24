@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>首页</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let topic of topics">
+      <img width="60" height="60" [src]="topic.author.avatar_url"/>
+      {{topic.title}}
+    </ion-item>
+  </ion-list>
+</ion-content>

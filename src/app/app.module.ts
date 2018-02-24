@@ -3,33 +3,34 @@ import { BrowserModule } from '@angular/platform-browser'
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular'
 import { AppComponent } from './app.component'
 
-import { AboutComponent } from '../pages/about/about'
-import { ContactComponent } from '../pages/contact/contact'
-import { HomeComponent } from '../pages/home/home'
-import { TabsComponent } from '../pages/tabs/tabs'
-
 import { StatusBar } from '@ionic-native/status-bar'
 import { SplashScreen } from '@ionic-native/splash-screen'
+import { TabsComponent } from '../pages/tabs/tabs.component'
+import { HomeComponent } from '../pages/home/home.component'
+import { ContactComponent } from '../pages/contact/contact.component'
+import { AboutComponent } from '../pages/about/about.component'
+import { ShareModule } from '../share/share.module'
+
+const components = [
+    AppComponent,
+    TabsComponent,
+    HomeComponent,
+    ContactComponent,
+    AboutComponent
+]
 
 @NgModule({
     declarations: [
-        AppComponent,
-        AboutComponent,
-        ContactComponent,
-        HomeComponent,
-        TabsComponent
+        ...components
     ],
     imports: [
         BrowserModule,
+        ShareModule,
         IonicModule.forRoot(AppComponent)
     ],
     bootstrap: [IonicApp],
     entryComponents: [
-        AppComponent,
-        AboutComponent,
-        ContactComponent,
-        HomeComponent,
-        TabsComponent
+        ...components
     ],
     providers: [
         StatusBar,
