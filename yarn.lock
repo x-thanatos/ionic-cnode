@@ -113,6 +113,22 @@
     localforage "~1.4.2"
     localforage-cordovasqlitedriver "~1.5.0"
 
+"@ngrx/effects@^5.1.0":
+  version "5.1.0"
+  resolved "http://registry.npm.taobao.org/@ngrx/effects/download/@ngrx/effects-5.1.0.tgz#cef84576b2d0333f19188aedfe156fd301bff70a"
+
+"@ngrx/entity@^5.1.0":
+  version "5.1.0"
+  resolved "http://registry.npm.taobao.org/@ngrx/entity/download/@ngrx/entity-5.1.0.tgz#27de53bd10c7f93c82d8aa1642357c65657e1459"
+
+"@ngrx/store-devtools@^5.1.0":
+  version "5.1.0"
+  resolved "http://registry.npm.taobao.org/@ngrx/store-devtools/download/@ngrx/store-devtools-5.1.0.tgz#7df8a6da652cc792000ad058ca4072a32e3629b1"
+
+"@ngrx/store@^5.1.0":
+  version "5.1.0"
+  resolved "http://registry.npm.taobao.org/@ngrx/store/download/@ngrx/store-5.1.0.tgz#d957131e62041deede043524fd300db9fa835d68"
+
 "@types/localforage@0.0.30":
   version "0.0.30"
   resolved "http://registry.npm.taobao.org/@types/localforage/download/@types/localforage-0.0.30.tgz#3d60a6bf6dda38e3f8a469611598379f1f649509"
@@ -2981,6 +2997,10 @@ nan@^2.3.0, nan@^2.3.2:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "http://registry.npm.taobao.org/negotiator/download/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+ngrx-store-logger@^0.2.0:
+  version "0.2.0"
+  resolved "http://registry.npm.taobao.org/ngrx-store-logger/download/ngrx-store-logger-0.2.0.tgz#9bef9447bc91d8e35a2aa6ae1c5a57ea51036694"
 
 node-gyp@^3.3.1:
   version "3.6.2"

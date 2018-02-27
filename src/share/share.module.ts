@@ -1,13 +1,21 @@
 import { NgModule } from '@angular/core'
-import { HttpClientModule } from '@angular/common/http'
-import { HomeService } from './service/home.service'
+import { TopicTabPipe } from './pipes/topic-tab.pipe'
+import { TopicStatusPipe } from './pipes/topic-status.pipe'
 
+const pipes = [
+    TopicTabPipe,
+    TopicStatusPipe
+]
 @NgModule({
-    imports: [
-        HttpClientModule
+    declarations: [
+        ...pipes
     ],
     providers: [
-        HomeService
+        TopicTabPipe,
+        TopicStatusPipe
+    ],
+    exports: [
+        ...pipes
     ]
 })
 export class ShareModule {
