@@ -1,1 +1,6 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-tabs color="primary">
+  <ion-tab *ngFor="let tab of tabs"
+           [root]="tab.component"
+           [tabTitle]="tab.title"
+           [tabIcon]="tab.icon"></ion-tab>
+</ion-tabs>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { TopicModel, TopicQueryModel } from './home.model'
+import { TopicDetailQueryModel, TopicBaseModel, TopicQueryModel, TopicDetailModel } from './home.model'
 import { API_ADDRESS } from '../../api-address'
 import { toHttpParams } from '../../util'
 import { BasResponseModel } from '../../http-interceptor'
@@ -11,7 +11,13 @@ export class HomeService {
     }
 
     loadTopics(param: TopicQueryModel = {}) {
-        return this._http.get<BasResponseModel<TopicModel[]>>(API_ADDRESS.TOPIC_LIST, {
+        return this._http.get<BasResponseModel<TopicBaseModel[]>>(API_ADDRESS.TOPIC_LIST, {
+            params: toHttpParams(param)
+        })
+    }
+
+    loadTopicDetail(id: string, param: TopicDetailQueryModel = {}) {
+        return this._http.get<BasResponseModel<TopicDetailModel>>(API_ADDRESS.TOPIC_DETAIL.replace(':id', id), {
             params: toHttpParams(param)
         })
     }

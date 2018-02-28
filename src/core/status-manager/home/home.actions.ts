@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store'
-import { TopicModel, TopicQueryModel } from './home.model'
+import { TopicBaseModel, TopicQueryModel } from './home.model'
 
 export enum HomeActionEnums {
     LoadTopics = '[Home] load topics',
@@ -25,7 +25,7 @@ export namespace HomeActions {
     export class LoadTopicsSuccess implements Action {
         readonly type = HomeActionEnums.LoadTopicsSuccess
 
-        constructor(public payload: TopicModel[]) {
+        constructor(public payload: TopicBaseModel[]) {
         }
     }
 }

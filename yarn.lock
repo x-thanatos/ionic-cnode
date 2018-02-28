@@ -117,10 +117,6 @@
   version "5.1.0"
   resolved "http://registry.npm.taobao.org/@ngrx/effects/download/@ngrx/effects-5.1.0.tgz#cef84576b2d0333f19188aedfe156fd301bff70a"
 
-"@ngrx/entity@^5.1.0":
-  version "5.1.0"
-  resolved "http://registry.npm.taobao.org/@ngrx/entity/download/@ngrx/entity-5.1.0.tgz#27de53bd10c7f93c82d8aa1642357c65657e1459"
-
 "@ngrx/store-devtools@^5.1.0":
   version "5.1.0"
   resolved "http://registry.npm.taobao.org/@ngrx/store-devtools/download/@ngrx/store-devtools-5.1.0.tgz#7df8a6da652cc792000ad058ca4072a32e3629b1"
@@ -1061,7 +1057,7 @@ cordova-common@^2.2.0:
     underscore "^1.8.3"
     unorm "^1.3.3"
 
-cordova-ios@4.5.4:
+cordova-ios@^4.5.4:
   version "4.5.4"
   resolved "http://registry.npm.taobao.org/cordova-ios/download/cordova-ios-4.5.4.tgz#c80648058972968570dc15da97314ff92d07dfe7"
   dependencies:

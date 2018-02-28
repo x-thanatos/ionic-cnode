@@ -6,27 +6,11 @@
                    cancelButtonText="清除"
                    [animated]="true"
                    [showCancelButton]="true"
-                   (ionInput)="filter()">
+                   (ionInput)="topicList.filter(keywords)">
     </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding-left padding-right>
-  <ion-list>
-    <ion-item *ngFor="let topic of topics; let a = $index" no-padding>
-      <img item-start [src]="topic.author.avatar_url">
-      <ion-grid no-padding>
-        <ion-row no-padding justify-content-around>
-          <ion-col class="title">
-            <h2 text-ellipsis>{{topic.title}}</h2>
-            <p class="mt-8">评论:{{topic.reply_count}} | 阅读:{{topic.visit_count}}</p>
-          </ion-col>
-          <ion-col class="status" text-center>
-            <ion-badge color="{{topic|TopicStatus: 'color'}}">{{topic|TopicStatus: 'text'}}</ion-badge>
-            <p class="mt-8">1天前</p>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-  </ion-list>
+  <topic-list #list></topic-list>
 </ion-content>

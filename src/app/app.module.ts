@@ -4,34 +4,50 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular'
 import { AppComponent } from './app.component'
 import { StatusBar } from '@ionic-native/status-bar'
 import { SplashScreen } from '@ionic-native/splash-screen'
-import { TabsComponent } from '../pages/tabs/tabs.component'
-import { HomeComponent } from '../pages/home/home.component'
-import { ContactComponent } from '../pages/contact/contact.component'
-import { AboutComponent } from '../pages/about/about.component'
 import { ShareModule } from '../share/share.module'
 import { CoreModule } from '../core/core.module'
+import { HomeComponent } from '../pages/home/home.component'
+import { UserComponent } from '../pages/user/user.component'
+import { TopicListComponent } from '../pages/home/components/topic-list/topic-list.component'
+import { TopicDetailComponent } from '../pages/home/components/topic-detail/topic-detail.component'
 
-const components = [
+const HOME_COMPONENTS = [
+    TopicListComponent,
+    TopicDetailComponent,
+    HomeComponent
+]
+
+const USER_COMPONENTS = [
+    UserComponent
+]
+
+const COMPONENTS = [
     AppComponent,
-    TabsComponent,
-    HomeComponent,
-    ContactComponent,
-    AboutComponent
+    ...HOME_COMPONENTS,
+    ...USER_COMPONENTS
 ]
 
 @NgModule({
     declarations: [
-        ...components
+        ...COMPONENTS
     ],
     imports: [
         BrowserModule,
         CoreModule,
         ShareModule,
-        IonicModule.forRoot(AppComponent)
+        IonicModule.forRoot(AppComponent, {
+            preloadModules: true
+        }, {
+            links: [
+                { component: HomeComponent, name: 'home', segment: 'home' },
+                { component: UserComponent, name: 'user', segment: 'user' },
+                { component: TopicDetailComponent, name: 'topic-detail', segment: 'detail/:id' }
+            ]
+        })
     ],
     bootstrap: [IonicApp],
     entryComponents: [
-        ...components
+        ...COMPONENTS
     ],
     providers: [
         StatusBar,

@@ -25,7 +25,7 @@ const metaReducers: MetaReducer<AppState>[] = []
 
 // logger
 function logger(reducer: ActionReducer<AppState>): ActionReducer<AppState> {
-    return storeLogger()(reducer)
+    return storeLogger({ collapsed: true })(reducer)
 }
 
 if (process.env.IONIC_ENV !== 'prod') {
