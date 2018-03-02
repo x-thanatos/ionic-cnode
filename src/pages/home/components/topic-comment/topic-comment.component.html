@@ -1,0 +1,31 @@
+<ion-grid no-padding *ngIf="comments">
+  <ion-row>
+    <ion-col>
+      <h6 class="slogan" no-margin>
+        <span>{{comments.length}}</span>
+        条评论
+      </h6>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-item *ngFor="let comment of comments; let $index = index" text-wrap no-padding>
+      <ion-grid no-padding>
+        <ion-row justify-content-around>
+          <ion-col class="avatar">
+            <img [src]="comment.author.avatar_url">
+            <div class="info">
+              <span class="name" text-ellipsis>{{comment.author.loginname}}</span>
+              <span class="floor">{{$index+1}}楼</span>
+              <span class="time">3个月前</span>
+            </div>
+          </ion-col>
+          <ion-col class="like" text-right>
+            <ion-icon name="thumbs-up-outline"></ion-icon>
+            <span text-ellipsis>2222</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div [innerHtml]="_htmlSanitizer(comment.content)"></div>
+    </ion-item>
+  </ion-list>
+</ion-grid>

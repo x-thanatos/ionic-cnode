@@ -10,10 +10,12 @@ import { HomeComponent } from '../pages/home/home.component'
 import { UserComponent } from '../pages/user/user.component'
 import { TopicListComponent } from '../pages/home/components/topic-list/topic-list.component'
 import { TopicDetailComponent } from '../pages/home/components/topic-detail/topic-detail.component'
+import { TopicCommentComponent } from '../pages/home/components/topic-comment/topic-comment.component'
 
 const HOME_COMPONENTS = [
     TopicListComponent,
     TopicDetailComponent,
+    TopicCommentComponent,
     HomeComponent
 ]
 
@@ -39,9 +41,25 @@ const COMPONENTS = [
             preloadModules: true
         }, {
             links: [
-                { component: HomeComponent, name: 'home', segment: 'home' },
-                { component: UserComponent, name: 'user', segment: 'user' },
-                { component: TopicDetailComponent, name: 'topic-detail', segment: 'detail/:id' }
+                {
+                    component: HomeComponent,
+                    name: 'home',
+                    segment: 'home',
+                    priority: 'high'
+                },
+                {
+                    component: UserComponent,
+                    name: 'user',
+                    segment: 'user',
+                    priority: 'high'
+                },
+                {
+                    component: TopicDetailComponent,
+                    name: 'topic-detail',
+                    segment: 'detail/:id',
+                    priority: 'high',
+                    defaultHistory: ['home']
+                }
             ]
         })
     ],

@@ -10,7 +10,7 @@ export interface TopicDetailQueryModel {
     accesstoken?: string
 }
 
-interface Author {
+export interface Author {
     avatar_url: string,
     loginname: string
 }
@@ -30,7 +30,7 @@ export interface TopicBaseModel {
     visit_count: number
 }
 
-interface TopicReply {
+export interface TopicReply {
     author: Author
     content: string
     create_at: string

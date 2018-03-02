@@ -7,7 +7,6 @@ import { AppState } from '../../../../core/status-manager/reducers'
 import { HomeActions } from '../../../../core/status-manager/home/home.actions'
 import { homeTopicsSelector } from '../../../../core/status-manager/home/home.selector'
 import { getSyncObservableData } from '../../../../core/util'
-import { TopicDetailComponent } from '../topic-detail/topic-detail.component'
 
 @Component({
     selector: 'topic-list',
@@ -47,14 +46,7 @@ export class TopicListComponent implements OnInit {
         this._nav.push('topic-detail', { id })
     }
 
-    private loadTopics() {
-        this._store.dispatch(new HomeActions.LoadTopics(this.queryParam))
-
-        return this._store.select(homeTopicsSelector)
-            .filter(topics => !!topics)
-    }
-
-    private _infiniteScroll(scroll: InfiniteScroll) {
+    _infiniteScroll(scroll: InfiniteScroll) {
         this._loadTopicsSub.unsubscribe()
         this._loadTopicsSub = this.loadTopics()
             .debounceTime(500)
@@ -65,7 +57,14 @@ export class TopicListComponent implements OnInit {
             })
     }
 
-    private _trackById(index: number, topic: TopicBaseModel) {
+    _trackById(index: number, topic: TopicBaseModel) {
         return topic.id
+    }
+
+    private loadTopics() {
+        this._store.dispatch(new HomeActions.LoadTopics(this.queryParam))
+
+        return this._store.select(homeTopicsSelector)
+            .filter(topics => !!topics)
     }
 }

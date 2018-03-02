@@ -40,7 +40,7 @@ export class TopicDetailComponent implements OnInit, OnDestroy {
         this._subs.forEach(sub => sub.unsubscribe())
     }
 
-    private _htmlSanitizer(html): SafeHtml {
+    _htmlSanitizer(html): SafeHtml {
         return this._sanitizer.sanitize(SecurityContext.HTML, html)
     }
 }
