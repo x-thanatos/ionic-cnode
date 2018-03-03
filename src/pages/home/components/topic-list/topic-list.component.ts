@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ViewChild } from '@angular/core'
 import { Store } from '@ngrx/store'
 import { InfiniteScroll, LoadingController, NavController } from 'ionic-angular'
 import { Subscription } from 'rxjs/Subscription'
@@ -15,6 +15,7 @@ import { getSyncObservableData } from '../../../../core/util'
 export class TopicListComponent implements OnInit {
     topics: TopicBaseModel[] = []
     queryParam: TopicQueryModel = { page: 1, limit: 40 }
+    @ViewChild('infiniteScroll') infiniteScroll: InfiniteScroll
     private _loadTopicsSub = Subscription.EMPTY
 
     constructor(private _nav: NavController,
@@ -28,7 +29,7 @@ export class TopicListComponent implements OnInit {
             duration: 0
         })
         loader.present()
-        this.loadTopics()
+        this._loadTopics()
             .take(1)
             .subscribe(topics => {
                 loader.dismiss()
@@ -46,9 +47,13 @@ export class TopicListComponent implements OnInit {
         this._nav.push('topic-detail', { id })
     }
 
+    backTop() {
+        // todo: 这里虚拟滚动组件没有对应的返回顶部API，不知道怎么返回顶部
+    }
+
     _infiniteScroll(scroll: InfiniteScroll) {
         this._loadTopicsSub.unsubscribe()
-        this._loadTopicsSub = this.loadTopics()
+        this._loadTopicsSub = this._loadTopics()
             .debounceTime(500)
             .subscribe(topics => {
                 this.queryParam.page++
@@ -61,7 +66,7 @@ export class TopicListComponent implements OnInit {
         return topic.id
     }
 
-    private loadTopics() {
+    private _loadTopics() {
         this._store.dispatch(new HomeActions.LoadTopics(this.queryParam))
 
         return this._store.select(homeTopicsSelector)

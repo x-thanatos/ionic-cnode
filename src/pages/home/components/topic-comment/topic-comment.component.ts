@@ -13,7 +13,6 @@ export class TopicCommentComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log(this.comments)
     }
 
     _htmlSanitizer(html): SafeHtml {

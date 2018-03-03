@@ -23,4 +23,9 @@ topic-list {
       max-width: $info-width;
     }
   }
+
+  .back {
+    position: fixed;
+    bottom: 70px;
+  }
 }

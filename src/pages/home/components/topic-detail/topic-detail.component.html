@@ -4,7 +4,9 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding-left padding-right>
-  <div [innerHtml]="_htmlSanitizer(topic?.content)"></div>
-  <hr no-margin/>
-  <topic-comment [comments]="topic?.replies"></topic-comment>
+  <ng-container *ngIf="topic">
+    <div [innerHtml]="_htmlSanitizer(topic.content)"></div>
+    <hr no-margin/>
+    <topic-comment [comments]="topic.replies"></topic-comment>
+  </ng-container>
 </ion-content>

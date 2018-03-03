@@ -57,7 +57,6 @@ const COMPONENTS = [
                     component: TopicDetailComponent,
                     name: 'topic-detail',
                     segment: 'detail/:id',
-                    priority: 'high',
                     defaultHistory: ['home']
                 }
             ]
