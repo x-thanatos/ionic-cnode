@@ -11,7 +11,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
 })
 export class TopicDetailComponent implements OnInit, OnDestroy {
     topic: TopicDetailModel
-    @ViewChild('navBar') navBar: Navbar
+    @ViewChild(Navbar) navBar: Navbar
     private _subs: Subscription[] = []
 
     constructor(private _navParams: NavParams,

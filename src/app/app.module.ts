@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular'
+import { IonicApp, IonicModule, IonicErrorHandler, DeepLinkConfig } from 'ionic-angular'
+import { IonicStorageModule } from '@ionic/storage'
 import { AppComponent } from './app.component'
 import { StatusBar } from '@ionic-native/status-bar'
 import { SplashScreen } from '@ionic-native/splash-screen'
@@ -29,6 +30,35 @@ const COMPONENTS = [
     ...USER_COMPONENTS
 ]
 
+const IONIC_MODULE_CONFIG = {
+    preloadModules: true
+}
+
+const DEEP_LINK_CONFIG: DeepLinkConfig = {
+    links: [
+        {
+            component: HomeComponent,
+            name: 'home',
+            segment: 'home',
+            defaultHistory: [],
+            priority: 'high'
+        },
+        {
+            component: UserComponent,
+            name: 'user',
+            segment: 'user',
+            defaultHistory: [],
+            priority: 'high'
+        },
+        {
+            component: TopicDetailComponent,
+            name: 'topic-detail',
+            segment: 'detail/:id',
+            defaultHistory: ['home']
+        }
+    ]
+}
+
 @NgModule({
     declarations: [
         ...COMPONENTS
@@ -37,30 +67,8 @@ const COMPONENTS = [
         BrowserModule,
         CoreModule,
         ShareModule,
-        IonicModule.forRoot(AppComponent, {
-            preloadModules: true
-        }, {
-            links: [
-                {
-                    component: HomeComponent,
-                    name: 'home',
-                    segment: 'home',
-                    priority: 'high'
-                },
-                {
-                    component: UserComponent,
-                    name: 'user',
-                    segment: 'user',
-                    priority: 'high'
-                },
-                {
-                    component: TopicDetailComponent,
-                    name: 'topic-detail',
-                    segment: 'detail/:id',
-                    defaultHistory: ['home']
-                }
-            ]
-        })
+        IonicModule.forRoot(AppComponent, IONIC_MODULE_CONFIG, DEEP_LINK_CONFIG),
+        IonicStorageModule.forRoot({ name: 'database' })
     ],
     bootstrap: [IonicApp],
     entryComponents: [

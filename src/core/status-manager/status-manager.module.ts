@@ -4,8 +4,12 @@ import { HttpClientModule } from '@angular/common/http'
 import { EFFECTS } from './effects'
 import { REDUCERS } from './reducers'
 import { HomeService } from './home/home.service'
+import { UserService } from './user/user.service'
 
-const services = [HomeService]
+const SERVICES = [
+    HomeService,
+    UserService
+]
 const STORE_DEV_TOOLS_IMPORTS: ModuleWithProviders[] = []
 
 if (process.env.IONIC_ENV !== 'prod') {
@@ -20,7 +24,7 @@ if (process.env.IONIC_ENV !== 'prod') {
         EFFECTS
     ],
     providers: [
-        ...services
+        ...SERVICES
     ]
 })
 export class StatusManagerModule {

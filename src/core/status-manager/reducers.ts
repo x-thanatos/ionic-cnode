@@ -7,18 +7,22 @@ import {
 } from '@ngrx/store'
 import { storeLogger } from 'ngrx-store-logger'
 import { homeReducer, HomeState } from './home/home.reducer'
+import { userReducer, UserState } from './user/user.reducer'
 
 export interface AppState {
-    home: HomeState
+    home: HomeState,
+    user: UserState
 }
 
 
 const reducers: ActionReducerMap<AppState> = {
-    home: homeReducer
+    home: homeReducer,
+    user: userReducer
 }
 
 export const featureSelector = {
-    home: createFeatureSelector<HomeState>('home')
+    home: createFeatureSelector<HomeState>('home'),
+    user: createFeatureSelector<UserState>('user')
 }
 
 const metaReducers: MetaReducer<AppState>[] = []
