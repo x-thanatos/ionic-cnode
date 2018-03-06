@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core'
 })
 export class TopicTabPipe implements PipeTransform {
     transform(input: string): string {
-        let tab = ''
+        let tab = '未知'
         switch (input) {
             case 'share':
                 tab = '分享'

@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar color="primary" #navBar>
+    <ion-title>内容</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding-left padding-right>
+  <ng-container *ngIf="topic">
+    <div [innerHtml]="_htmlSanitizer(topic.content)"></div>
+    <hr no-margin/>
+    <topic-comment [comments]="topic.replies"></topic-comment>
+  </ng-container>
+</ion-content>

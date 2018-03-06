@@ -1,0 +1,33 @@
+<ion-list [virtualScroll]="topics"
+          [approxItemHeight]="'76px'"
+          [virtualTrackBy]="_trackById"
+          [sliding]="true">
+  <ion-item no-padding
+            *virtualItem="let topic"
+            (click)="goToDetail(topic.id)">
+    <img item-start
+         class="avatar"
+         [src]="topic.author.avatar_url"/>
+    <ion-grid no-padding>
+      <ion-row no-padding justify-content-around>
+        <ion-col class="title">
+          <h2 text-ellipsis>{{topic.title}}</h2>
+          <p class="mt-8">评论:{{topic.reply_count}} | 阅读:{{topic.visit_count}}</p>
+        </ion-col>
+        <ion-col class="status" text-center>
+          <ion-badge color="{{topic|TopicStatus: 'color'}}">{{topic|TopicStatus: 'text'}}</ion-badge>
+          <p class="mt-8">1天前</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-list>
+<ion-infinite-scroll #infiniteScroll (ionInfinite)="_infiniteScroll($event)">
+  <ion-infinite-scroll-content loadingSpinner="bubbles"
+                               loadingText="加载中..."></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+<ion-fab bottom right class="back" (click)="backTop()">
+  <button ion-fab>
+    <ion-icon name="arrow-up"></ion-icon>
+  </button>
+</ion-fab>

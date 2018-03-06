@@ -1,12 +1,12 @@
-import { TopicModel } from './home.model'
+import { TopicBaseModel } from './home.model'
 import { HomeActionEnums, HomeActionTypes } from './home.actions'
 
 export interface HomeState {
-    topics: TopicModel[] | null
+    topics: TopicBaseModel[] | null
 }
 
 const initialState: HomeState = {
-    topics: []
+    topics: null
 }
 
 export function homeReducer(state: HomeState = initialState, action: HomeActionTypes): HomeState {
@@ -14,7 +14,7 @@ export function homeReducer(state: HomeState = initialState, action: HomeActionT
         case HomeActionEnums.LoadTopicsSuccess:
             return {
                 ...state,
-                topics: state.topics.concat(action.payload)
+                topics: state.topics ? state.topics.concat(action.payload) : action.payload
             }
 
         default:

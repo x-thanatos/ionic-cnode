@@ -1,0 +1,31 @@
+$info-width: 45px;
+$title-width: calc(100% - 50px);
+
+topic-list {
+  display: block;
+  height: 100%;
+
+  ion-item {
+    .avatar {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .title {
+      flex: 0 0 $title-width;
+      width: $title-width;
+      max-width: $title-width;
+    }
+
+    .status {
+      flex: 0 0 $info-width;
+      width: $info-width;
+      max-width: $info-width;
+    }
+  }
+
+  .back {
+    position: fixed;
+    bottom: 70px;
+  }
+}

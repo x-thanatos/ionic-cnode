@@ -11,8 +11,7 @@ const pipes = [
         ...pipes
     ],
     providers: [
-        TopicTabPipe,
-        TopicStatusPipe
+        ...pipes
     ],
     exports: [
         ...pipes

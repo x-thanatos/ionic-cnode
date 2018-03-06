@@ -5,7 +5,18 @@ export interface TopicQueryModel {
     mdrender?: boolean
 }
 
-export interface TopicModel {
+export interface TopicDetailQueryModel {
+    mdrender?: boolean
+    accesstoken?: string
+}
+
+export interface Author {
+    avatar_url: string,
+    loginname: string
+}
+
+export interface TopicBaseModel {
+    author: Author
     author_id: string
     content: string
     create_at: string
@@ -17,4 +28,18 @@ export interface TopicModel {
     title: string
     top: boolean
     visit_count: number
+}
+
+export interface TopicReply {
+    author: Author
+    content: string
+    create_at: string
+    id: string
+    is_uped: boolean
+    reply_id: string | null
+}
+
+export interface TopicDetailModel extends TopicBaseModel {
+    is_collect: boolean
+    replies: TopicReply[]
 }

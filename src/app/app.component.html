@@ -1,1 +1,17 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-tabs color="primary">
+  <ion-tab *ngFor="let tab of tabs"
+           [root]="tab.component"
+           [tabsHideOnSubPages]="true"
+           [tabTitle]="tab.title"
+           [tabIcon]="tab.icon"></ion-tab>
+</ion-tabs>
+<!--<ion-split-pane>-->
+  <!--<ion-menu id="homePageMenu" [content]="content">-->
+    <!--<ion-content>-->
+      <!--<ion-list>-->
+        <!--<p>some menu content, could be list items</p>-->
+      <!--</ion-list>-->
+    <!--</ion-content>-->
+  <!--</ion-menu>-->
+  <!--<ion-nav #content [root]="homePage"></ion-nav>-->
+<!--</ion-split-pane>-->
