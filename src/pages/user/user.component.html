@@ -10,7 +10,7 @@
                       class="pos-rel"
                       clear
                       color="light"
-                      (click)="goMessage()">
+                      (click)="goMessageList()">
                 <ion-badge class="badge-number" color="danger">9</ion-badge>
                 <ion-icon name="mail"></ion-icon>
               </button>
@@ -55,15 +55,28 @@
           <ion-row>
             <ion-col>
               <ion-list>
-                <button ion-item>
-                  <ion-icon item-start name="chatbubbles" color="secondary"></ion-icon>
-                  最近回复
-                  <ion-badge item-right color="danger">1</ion-badge>
-                </button>
-                <button ion-item>
+                <button ion-item (click)="goRecentTopic(info.recent_topics)">
                   <ion-icon item-start name="paw" color="danger"></ion-icon>
-                  足迹
+                  我的主题
                   <ion-badge item-right color="danger">15</ion-badge>
+                </button>
+                <button ion-item (click)="goRecentReply(info.recent_replies)">
+                  <ion-icon item-start name="chatbubbles" color="secondary"></ion-icon>
+                  回复的主题
+                  <ion-badge item-right
+                             *ngIf="info?.recent_replies.length"
+                             color="danger">
+                    {{info?.recent_replies.length}}
+                  </ion-badge>
+                </button>
+                <button ion-item (click)="goMarket()">
+                  <ion-icon item-start name="cart" color="warn"></ion-icon>
+                  积分商城
+                </button>
+                <button ion-item (click)="goAbout()">
+                  <ion-icon item-start name="information-circle" color="primary"></ion-icon>
+                  关于
+                  <ion-badge item-right color="danger">new</ion-badge>
                 </button>
               </ion-list>
             </ion-col>

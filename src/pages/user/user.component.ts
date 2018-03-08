@@ -2,12 +2,17 @@ import { Component, OnInit, ViewChild } from '@angular/core'
 import { AlertController, List, NavController } from 'ionic-angular'
 import { Store } from '@ngrx/store'
 import { Storage } from '@ionic/storage'
+import { Observable } from 'rxjs/Observable'
 import { AppState } from '../../core/status-manager/reducers'
 import { UserActions } from '../../core/status-manager/user/user.actions'
 import { userInfoSelector } from '../../core/status-manager/user/user.selector'
-import { UserInfoModel } from '../../core/status-manager/user/user.model'
+import { SimpleReply, SimpleTopic, UserInfoModel } from '../../core/status-manager/user/user.model'
 import { DATABASE_KEYS } from '../../core/util'
-import { Observable } from 'rxjs/Observable'
+import { RecentTopicListComponent } from './components/recent-topic-list/recent-topic-list.component'
+import { EditUserComponent } from './components/edit-user/edit-user.component'
+import { MessageListComponent } from './components/message-list/message-list.component'
+import { SettingsComponent } from './components/settings/settings.component'
+import { MarketComponent } from './components/market/market.component'
 
 const MODE = {
     unauthenticated: 'unauthenticated',
@@ -43,7 +48,7 @@ export class UserComponent implements OnInit {
         Observable.fromPromise(this._storage.get(DATABASE_KEYS.userInfo))
             .take(1)
             .switchMap((userInfo) => {
-                if (!userInfo) {
+                if (userInfo) {
                     return this._updateInfo()
                 }
 
@@ -57,16 +62,33 @@ export class UserComponent implements OnInit {
     }
 
     goEdit() {
-        console.log('go to edit page')
+        this._nav.push(EditUserComponent)
     }
 
-    goMessage() {
-        console.log('go to message page')
+    goMessageList() {
+        this._nav.push(MessageListComponent)
     }
 
     goSettings() {
-        console.log('go to settings page')
+        this._nav.push(SettingsComponent)
     }
+
+    goMarket() {
+        this._nav.push(MarketComponent)
+    }
+
+    goRecentTopic(topics: SimpleTopic[]) {
+        this._nav.push(RecentTopicListComponent, { title: '我的主题', topics })
+    }
+
+    goRecentReply(replies: SimpleReply[]) {
+        this._nav.push(RecentTopicListComponent, { title: '回复的主题', replies })
+    }
+
+    goAbout() {
+        this._nav.push('about')
+    }
+
 
     logout() {
         const alert = this._alert.create({

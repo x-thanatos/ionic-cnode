@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit, SecurityContext, ViewChild } from '@angular/core'
-import { LoadingController, Navbar, NavParams } from 'ionic-angular'
+import { Component, OnDestroy, OnInit, SecurityContext } from '@angular/core'
+import { LoadingController, NavParams } from 'ionic-angular'
 import { HomeService } from '../../../../core/status-manager/home/home.service'
 import { Subscription } from 'rxjs/Subscription'
 import { TopicDetailModel } from '../../../../core/status-manager/home/home.model'
@@ -11,7 +11,6 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
 })
 export class TopicDetailComponent implements OnInit, OnDestroy {
     topic: TopicDetailModel
-    @ViewChild(Navbar) navBar: Navbar
     private _subs: Subscription[] = []
 
     constructor(private _navParams: NavParams,
@@ -21,7 +20,6 @@ export class TopicDetailComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        this.navBar.setBackButtonText('返回')
         const loader = this._loading.create({
             content: '加载中...',
             duration: 0

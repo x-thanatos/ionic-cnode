@@ -12,6 +12,13 @@ import { UserComponent } from '../pages/user/user.component'
 import { TopicListComponent } from '../pages/home/components/topic-list/topic-list.component'
 import { TopicDetailComponent } from '../pages/home/components/topic-detail/topic-detail.component'
 import { TopicCommentComponent } from '../pages/home/components/topic-comment/topic-comment.component'
+import { AboutComponent } from '../pages/user/components/about/about.component'
+import { RecentTopicListComponent } from '../pages/user/components/recent-topic-list/recent-topic-list.component'
+import { SettingsComponent } from '../pages/user/components/settings/settings.component'
+import { EditUserComponent } from '../pages/user/components/edit-user/edit-user.component'
+import { MarketComponent } from '../pages/user/components/market/market.component'
+import { MessageListComponent } from '../pages/user/components/message-list/message-list.component'
+import { MessageDetailComponent } from '../pages/user/components/message-detial/message-detail.component'
 
 const HOME_COMPONENTS = [
     TopicListComponent,
@@ -21,7 +28,14 @@ const HOME_COMPONENTS = [
 ]
 
 const USER_COMPONENTS = [
-    UserComponent
+    UserComponent,
+    AboutComponent,
+    SettingsComponent,
+    EditUserComponent,
+    MarketComponent,
+    MessageDetailComponent,
+    MessageListComponent,
+    RecentTopicListComponent
 ]
 
 const COMPONENTS = [
@@ -31,7 +45,12 @@ const COMPONENTS = [
 ]
 
 const IONIC_MODULE_CONFIG = {
-    preloadModules: true
+    preloadModules: true,
+    backButtonText: '返回',
+    iconMode: 'ios',
+    pageTransition: 'ios-transition',
+    activator: 'ripple',
+    swipeBackEnabled: true
 }
 
 const DEEP_LINK_CONFIG: DeepLinkConfig = {
@@ -39,7 +58,7 @@ const DEEP_LINK_CONFIG: DeepLinkConfig = {
         {
             component: HomeComponent,
             name: 'home',
-            segment: 'home',
+            segment: 'home/list',
             defaultHistory: [],
             priority: 'high'
         },
@@ -53,8 +72,14 @@ const DEEP_LINK_CONFIG: DeepLinkConfig = {
         {
             component: TopicDetailComponent,
             name: 'topic-detail',
-            segment: 'detail/:id',
+            segment: 'home/detail/:id',
             defaultHistory: ['home']
+        },
+        {
+            component: AboutComponent,
+            name: 'about',
+            segment: 'about',
+            defaultHistory: ['user']
         }
     ]
 }

@@ -5,6 +5,8 @@ page-user {
     background-color: color($colors, primary);
 
     .operation {
+      padding-top: 10px;
+
       .badge-number {
         position: absolute;
         right: 0;
