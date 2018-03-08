@@ -30,11 +30,12 @@ export class AppComponent implements OnInit {
                 private _statusBar: StatusBar,
                 private _splashScreen: SplashScreen,
                 private _menuController: MenuController) {
-        _platform.ready().then(() => {
+        this._platform.ready().then(() => {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             this._statusBar.styleBlackTranslucent()
             this._statusBar.overlaysWebView(true)
+            this._statusBar.hide()
             this._splashScreen.show()
         })
     }

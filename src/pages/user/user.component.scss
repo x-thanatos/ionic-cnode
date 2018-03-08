@@ -1,0 +1,38 @@
+$avatar-size: 80px;
+
+page-user {
+  .header {
+    background-color: color($colors, primary);
+
+    .operation {
+      padding-top: 10px;
+
+      .badge-number {
+        position: absolute;
+        right: 0;
+        top: 2px;
+        background-color: color($colors, danger);
+      }
+    }
+
+    .authenticated,
+    .unauthenticated {
+      img {
+        width: $avatar-size;
+        height: $avatar-size;
+        background-color: color($colors, light);
+        border-radius: 50%;
+      }
+    }
+
+    .authenticated {
+      .name {
+        color: color($colors, light);
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

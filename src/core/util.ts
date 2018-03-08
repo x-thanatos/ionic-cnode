@@ -18,3 +18,8 @@ export function getSyncObservableData<T>(observable: Observable<T>) {
 
     return sync
 }
+
+export const DATABASE_KEYS = {
+    userInfo: 'user_info',
+    accessToken: 'access_token'
+}
