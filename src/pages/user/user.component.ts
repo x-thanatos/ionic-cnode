@@ -47,15 +47,8 @@ export class UserComponent implements OnInit {
         this.list.containsSlidingItem(true)
         Observable.fromPromise(this._storage.get(DATABASE_KEYS.userInfo))
             .take(1)
-            .switchMap((userInfo) => {
-                if (userInfo) {
-                    return this._updateInfo()
-                }
-
-                return Observable.of(userInfo).take(1)
-            })
+            .switchMap((userInfo) => this._updateInfo())
             .subscribe(userInfo => {
-                console.log(userInfo)
                 this.info = userInfo
                 this.mode = MODE.authenticated
             })

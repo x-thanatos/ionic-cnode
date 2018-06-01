@@ -1009,7 +1009,7 @@ cookie@0.3.1:
   version "0.3.1"
   resolved "http://registry.npm.taobao.org/cookie/download/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
 
-cordova-android@7.0.0:
+cordova-android@~7.0.0:
   version "7.0.0"
   resolved "http://registry.npm.taobao.org/cordova-android/download/cordova-android-7.0.0.tgz#c95bedfcfbc3863b180c4d29effec4f79361d19d"
   dependencies:
