@@ -9,8 +9,6 @@
     "build:aot": "ionic-app-scripts build --prod --aot --minifyjs --minifycss --optimizejs",
     "run:android": " ionic cordova run android --livereload --debug",
     "lint": "ionic-app-scripts lint --typeCheckOnLint true && stylelint \"src/**/*.scss\" --color",
-    "precommit": "npm run lint",
-    "commitmsg": "validate-commit-msg",
     "pre-release": "standard-version --prerelease",
     "release": "standard-version"
   },
@@ -41,7 +39,8 @@
     "ionic-angular": "^3.9.2",
     "ionicons": "^4.1.2",
     "ngrx-store-logger": "^0.2.1",
-    "rxjs": "^6.2.0",
+    "rxjs": "^5.0.0",
+    "rxjs-compat": "^6.2.0",
     "sw-toolbox": "^3.6.0",
     "zone.js": "^0.8.26"
   },
@@ -70,5 +69,11 @@
       "ios",
       "android"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "commit-msg": "commitlint --color --edit"
+    }
   }
 }
