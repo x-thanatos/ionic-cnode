@@ -1,6 +1,5 @@
 import { enableProdMode } from '@angular/core'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
-import './rxjs.extension'
 import { AppModule } from './app.module'
 
 if (process.env.IONIC_ENV === 'prod') {

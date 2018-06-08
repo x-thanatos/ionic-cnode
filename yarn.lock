@@ -140,9 +140,9 @@
   version "0.0.30"
   resolved "http://registry.npm.taobao.org/@types/localforage/download/@types/localforage-0.0.30.tgz#3d60a6bf6dda38e3f8a469611598379f1f649509"
 
-"@types/node@^10.3.0":
-  version "10.3.0"
-  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-10.3.0.tgz#078516315a84d56216b5d4fed8f75d59d3b16cac"
+"@types/node@10.1.4":
+  version "10.1.4"
+  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-10.1.4.tgz#606651d3f8a8bec08b8cb262161aab9209f4a29d"
 
 JSONStream@^1.0.4:
   version "1.3.2"
@@ -4507,11 +4507,11 @@ rxjs-compat@^6.2.0:
   version "6.2.0"
   resolved "http://registry.npm.taobao.org/rxjs-compat/download/rxjs-compat-6.2.0.tgz#2eb49cc6ac20d0d7057c6887d1895beaab0966f9"
 
-rxjs@^5.0.0:
-  version "5.0.0"
-  resolved "http://registry.npm.taobao.org/rxjs/download/rxjs-5.0.0.tgz#4c31630a35cb36acde83afa4baeeba6ccede2405"
+rxjs@^6.2.0:
+  version "6.2.0"
+  resolved "http://registry.npm.taobao.org/rxjs/download/rxjs-6.2.0.tgz#e024d0e180b72756a83c2aaea8f25423751ba978"
   dependencies:
-    symbol-observable "^1.0.1"
+    tslib "^1.9.0"
 
 safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
@@ -5091,10 +5091,6 @@ sw-toolbox@^3.6.0:
   dependencies:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
-
-symbol-observable@^1.0.1:
-  version "1.2.0"
-  resolved "http://registry.npm.taobao.org/symbol-observable/download/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
 table@^4.0.1:
   version "4.0.2"

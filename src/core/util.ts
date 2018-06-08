@@ -1,5 +1,6 @@
 import { HttpParams } from '@angular/common/http'
-import { Observable } from 'rxjs/Observable'
+import { Observable } from 'rxjs/internal/Observable'
+import { take } from 'rxjs/operators'
 
 export function toHttpParams(obj: object): HttpParams {
     let params = new HttpParams()
@@ -14,7 +15,7 @@ export function toHttpParams(obj: object): HttpParams {
 
 export function getSyncObservableData<T>(observable: Observable<T>) {
     let sync: T
-    observable.take(1).subscribe(data => sync = data)
+    observable.pipe(take(1)).subscribe(data => sync = data)
 
     return sync
 }

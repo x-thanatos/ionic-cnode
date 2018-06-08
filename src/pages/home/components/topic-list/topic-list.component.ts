@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { Store } from '@ngrx/store'
 import { InfiniteScroll, LoadingController, NavController } from 'ionic-angular'
-import { Subscription } from 'rxjs/Subscription'
+import { Subscription } from 'rxjs/internal/Subscription'
+import { debounceTime, filter, take } from 'rxjs/operators'
 import { TopicBaseModel, TopicQueryModel } from '../../../../core/status-manager/home/home.model'
 import { AppState } from '../../../../core/status-manager/reducers'
 import { HomeActions } from '../../../../core/status-manager/home/home.actions'
@@ -30,7 +31,7 @@ export class TopicListComponent implements OnInit {
         })
         loader.present()
         this._loadTopics()
-            .take(1)
+            .pipe(take(1))
             .subscribe(topics => {
                 loader.dismiss()
                 this.queryParam.page++
@@ -54,7 +55,7 @@ export class TopicListComponent implements OnInit {
     _infiniteScroll(scroll: InfiniteScroll) {
         this._loadTopicsSub.unsubscribe()
         this._loadTopicsSub = this._loadTopics()
-            .debounceTime(500)
+            .pipe(debounceTime(500))
             .subscribe(topics => {
                 this.queryParam.page++
                 this.topics = topics
@@ -70,6 +71,6 @@ export class TopicListComponent implements OnInit {
         this._store.dispatch(new HomeActions.LoadTopics(this.queryParam))
 
         return this._store.select(homeTopicsSelector)
-            .filter(topics => !!topics)
+            .pipe(filter(topics => !!topics))
     }
 }

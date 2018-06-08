@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core'
 import { AlertController, List, NavController } from 'ionic-angular'
 import { Store } from '@ngrx/store'
 import { Storage } from '@ionic/storage'
-import { Observable } from 'rxjs/Observable'
+import { filter, switchMap, take } from 'rxjs/operators'
+import { from } from 'rxjs/internal/observable/from'
 import { AppState } from '../../core/status-manager/reducers'
 import { UserActions } from '../../core/status-manager/user/user.actions'
 import { userInfoSelector } from '../../core/status-manager/user/user.selector'
@@ -45,9 +46,11 @@ export class UserComponent implements OnInit {
 
     ngOnInit() {
         this.list.containsSlidingItem(true)
-        Observable.fromPromise(this._storage.get(DATABASE_KEYS.userInfo))
-            .take(1)
-            .switchMap((userInfo) => this._updateInfo())
+        from(this._storage.get(DATABASE_KEYS.userInfo))
+            .pipe(
+                take(1),
+                switchMap((userInfo) => this._updateInfo())
+            )
             .subscribe(userInfo => {
                 this.info = userInfo
                 this.mode = MODE.authenticated
@@ -103,7 +106,9 @@ export class UserComponent implements OnInit {
         this._store.dispatch(new UserActions.LoadUserInfo('x-thanatos'))
 
         return this._store.select(userInfoSelector)
-            .filter(userInfo => !!userInfo)
-            .take(1)
+            .pipe(
+                filter(userInfo => !!userInfo),
+                take(1)
+            )
     }
 }
