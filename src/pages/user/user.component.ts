@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
-import { AlertController, List, NavController } from 'ionic-angular'
+import { AlertController, List, NavController } from '@ionic/angular'
 import { Store } from '@ngrx/store'
 import { Storage } from '@ionic/storage'
 import { filter, switchMap, take } from 'rxjs/operators'

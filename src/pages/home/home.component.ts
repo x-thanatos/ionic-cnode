@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
-import { MenuController } from 'ionic-angular'
+import { MenuController } from '@ionic/angular'
 import { TopicListComponent } from './components/topic-list/topic-list.component'
 
 @Component({

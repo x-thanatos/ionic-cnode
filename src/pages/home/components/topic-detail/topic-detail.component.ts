@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, SecurityContext } from '@angular/core'
-import { LoadingController, NavParams } from 'ionic-angular'
+import { LoadingController, NavParams } from '@ionic/angular'
 import { HomeService } from '../../../../core/status-manager/home/home.service'
 import { Subscription } from 'rxjs/Subscription'
 import { TopicDetailModel } from '../../../../core/status-manager/home/home.model'
@@ -19,16 +19,20 @@ export class TopicDetailComponent implements OnInit, OnDestroy {
                 private _service: HomeService) {
     }
 
-    ngOnInit() {
-        const loader = this._loading.create({
+    async loading() {
+        const loader = await this._loading.create({
             content: '加载中...',
             duration: 0
         })
-        loader.present()
+
+        return await loader.present()
+    }
+
+    ngOnInit() {
+        this.loading()
         const { id } = this._navParams.data
         const loadSub = this._service.loadTopicDetail(id as string, { mdrender: true })
             .subscribe(({ data }) => {
-                loader.dismiss()
                 this.topic = data
             })
         this._subs.push(loadSub)

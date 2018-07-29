@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { Store } from '@ngrx/store'
-import { InfiniteScroll, LoadingController, NavController } from 'ionic-angular'
+import { InfiniteScroll, LoadingController, NavController } from '@ionic/angular'
 import { Subscription } from 'rxjs/internal/Subscription'
 import { debounceTime, filter, take } from 'rxjs/operators'
 import { TopicBaseModel, TopicQueryModel } from '../../../../core/status-manager/home/home.model'
@@ -29,11 +29,9 @@ export class TopicListComponent implements OnInit {
             content: '加载中...',
             duration: 0
         })
-        loader.present()
         this._loadTopics()
             .pipe(take(1))
             .subscribe(topics => {
-                loader.dismiss()
                 this.queryParam.page++
                 this.topics = topics
             })
