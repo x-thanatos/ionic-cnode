@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { Store } from '@ngrx/store'
-import { InfiniteScroll, LoadingController, NavController } from '@ionic/angular'
+import { InfiniteScroll, LoadingController } from '@ionic/angular'
 import { Subscription } from 'rxjs/internal/Subscription'
 import { debounceTime, filter, take } from 'rxjs/operators'
 import { TopicBaseModel, TopicQueryModel } from '../../../../core/status-manager/home/home.model'
@@ -19,16 +19,11 @@ export class TopicListComponent implements OnInit {
     @ViewChild('infiniteScroll') infiniteScroll: InfiniteScroll
     private _loadTopicsSub = Subscription.EMPTY
 
-    constructor(private _nav: NavController,
-                private _loading: LoadingController,
+    constructor(private _loading: LoadingController,
                 private _store: Store<AppState>) {
     }
 
     ngOnInit() {
-        const loader = this._loading.create({
-            content: '加载中...',
-            duration: 0
-        })
         this._loadTopics()
             .pipe(take(1))
             .subscribe(topics => {
@@ -43,7 +38,7 @@ export class TopicListComponent implements OnInit {
     }
 
     goToDetail(id: string) {
-        this._nav.push('topic-detail', { id })
+        console.log(id)
     }
 
     backTop() {

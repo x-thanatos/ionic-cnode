@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, SecurityContext } from '@angular/core'
-import { LoadingController, NavParams } from '@ionic/angular'
+import { LoadingController } from '@ionic/angular'
 import { HomeService } from '../../../../core/status-manager/home/home.service'
 import { Subscription } from 'rxjs/Subscription'
 import { TopicDetailModel } from '../../../../core/status-manager/home/home.model'
@@ -13,8 +13,7 @@ export class TopicDetailComponent implements OnInit, OnDestroy {
     topic: TopicDetailModel
     private _subs: Subscription[] = []
 
-    constructor(private _navParams: NavParams,
-                private _loading: LoadingController,
+    constructor(private _loading: LoadingController,
                 private _sanitizer: DomSanitizer,
                 private _service: HomeService) {
     }
@@ -30,7 +29,7 @@ export class TopicDetailComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.loading()
-        const { id } = this._navParams.data
+        const { id } = { id: '1'}
         const loadSub = this._service.loadTopicDetail(id as string, { mdrender: true })
             .subscribe(({ data }) => {
                 this.topic = data

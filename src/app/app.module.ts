@@ -29,14 +29,14 @@ const IONIC_MODULE_CONFIG = {
         ShareModule,
         IonicModule.forRoot(),
         AppRouterModule,
-        IonicStorageModule.forRoot({name: 'database'})
+        IonicStorageModule.forRoot({ name: 'database' })
     ],
-    bootstrap: [],
+    bootstrap: [AppComponent],
     entryComponents: [],
     providers: [
         StatusBar,
         SplashScreen,
-        {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     ]
 })
 export class AppModule {

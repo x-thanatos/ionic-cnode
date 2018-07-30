@@ -8,6 +8,7 @@ import {
 import { storeLogger } from 'ngrx-store-logger'
 import { homeReducer, HomeState } from './home/home.reducer'
 import { userReducer, UserState } from './user/user.reducer'
+import { environment } from '../../environments/environment'
 
 export interface AppState {
     home: HomeState,
@@ -32,7 +33,7 @@ function logger(reducer: ActionReducer<AppState>): ActionReducer<AppState> {
     return storeLogger({ collapsed: true })(reducer)
 }
 
-if (process.env.IONIC_ENV !== 'prod') {
+if (environment.production === false) {
     metaReducers.push(logger)
 }
 

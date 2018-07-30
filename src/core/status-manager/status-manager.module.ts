@@ -5,6 +5,7 @@ import { EFFECTS } from './effects'
 import { REDUCERS } from './reducers'
 import { HomeService } from './home/home.service'
 import { UserService } from './user/user.service'
+import { environment } from '../../environments/environment'
 
 const SERVICES = [
     HomeService,
@@ -12,7 +13,7 @@ const SERVICES = [
 ]
 const STORE_DEV_TOOLS_IMPORTS: ModuleWithProviders[] = []
 
-if (process.env.IONIC_ENV !== 'prod') {
+if (environment.production === false) {
     STORE_DEV_TOOLS_IMPORTS.push(StoreDevtoolsModule.instrument({ maxAge: 500 }))
 }
 

@@ -4,7 +4,7 @@
   "author": "xluobin@163.com",
   "private": true,
   "scripts": {
-    "serve": "ng serve",
+    "serve:hmr": "ng serve --host --live-reload --hmr --source-map --progress --open",
     "build": "ionic-app-scripts build --prod",
     "build:aot": "ionic-app-scripts build --prod --aot --minifyjs --minifycss --optimizejs",
     "run:android": " ionic cordova run android --livereload --debug",

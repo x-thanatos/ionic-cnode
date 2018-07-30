@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core'
-import { NavParams } from '@ionic/angular'
 
 @Component({
     selector: 'page-recent-topic-list',
@@ -8,11 +7,9 @@ import { NavParams } from '@ionic/angular'
 export class RecentTopicListComponent implements OnInit {
     title: string
 
-    constructor(private _navParams: NavParams) {
+    constructor() {
     }
 
     ngOnInit() {
-        console.log(this._navParams)
-        this.title = this._navParams.data.title
     }
 }
