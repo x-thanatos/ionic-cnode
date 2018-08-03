@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { IonicModule } from '@ionic/angular'
 import { UserRouterModule } from './user.router.module'
 import { UserComponent } from './user.component'
 import { SettingsComponent } from './components/settings/settings.component'
@@ -8,6 +10,8 @@ import { MarketComponent } from './components/market/market.component'
 import { EditUserComponent } from './components/edit-user/edit-user.component'
 import { AboutComponent } from './components/about/about.component'
 import { MessageListComponent } from './components/message-list/message-list.component'
+import { ShareModule } from '../../share/share.module'
+
 
 @NgModule({
     declarations: [
@@ -21,6 +25,9 @@ import { MessageListComponent } from './components/message-list/message-list.com
         AboutComponent
     ],
     imports: [
+        CommonModule,
+        IonicModule,
+        ShareModule,
         UserRouterModule
     ]
 })

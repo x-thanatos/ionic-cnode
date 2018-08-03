@@ -8,12 +8,12 @@ const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'list'
+        path: 'list',
+        component: HomeComponent
     }
 ]
 
 @NgModule({
-    declarations: [HomeComponent],
     imports: [
         RouterModule.forChild(routes)
     ]

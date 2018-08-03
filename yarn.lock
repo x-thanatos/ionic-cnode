@@ -2,22 +2,22 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.7.1", "@angular-devkit/architect@^0.7.1":
-  version "0.7.1"
-  resolved "http://registry.npm.taobao.org/@angular-devkit/architect/download/@angular-devkit/architect-0.7.1.tgz#c1e999f6565e4596d0912ea30c190981f79a9481"
+"@angular-devkit/architect@0.7.2", "@angular-devkit/architect@^0.7.2":
+  version "0.7.2"
+  resolved "http://registry.npm.taobao.org/@angular-devkit/architect/download/@angular-devkit/architect-0.7.2.tgz#b630f201f338c2b145c360b2b816185e1994b2c0"
   dependencies:
-    "@angular-devkit/core" "0.7.1"
+    "@angular-devkit/core" "0.7.2"
     rxjs "^6.0.0"
 
-"@angular-devkit/build-angular@^0.7.1":
-  version "0.7.1"
-  resolved "http://registry.npm.taobao.org/@angular-devkit/build-angular/download/@angular-devkit/build-angular-0.7.1.tgz#797d78a5eb7d275cbe2b2bc90ca82285888c5a96"
+"@angular-devkit/build-angular@^0.7.2":
+  version "0.7.2"
+  resolved "http://registry.npm.taobao.org/@angular-devkit/build-angular/download/@angular-devkit/build-angular-0.7.2.tgz#066f6475eb483542e36cadfbbff1a7913ecfcfb1"
   dependencies:
-    "@angular-devkit/architect" "0.7.1"
-    "@angular-devkit/build-optimizer" "0.7.1"
-    "@angular-devkit/build-webpack" "0.7.1"
-    "@angular-devkit/core" "0.7.1"
-    "@ngtools/webpack" "6.1.1"
+    "@angular-devkit/architect" "0.7.2"
+    "@angular-devkit/build-optimizer" "0.7.2"
+    "@angular-devkit/build-webpack" "0.7.2"
+    "@angular-devkit/core" "0.7.2"
+    "@ngtools/webpack" "6.1.2"
     ajv "~6.4.0"
     autoprefixer "^8.4.1"
     circular-dependency-plugin "^5.0.2"
@@ -71,21 +71,21 @@
     typescript "~2.6.1"
     webpack-sources "^1.0.1"
 
-"@angular-devkit/build-optimizer@0.7.1":
-  version "0.7.1"
-  resolved "http://registry.npm.taobao.org/@angular-devkit/build-optimizer/download/@angular-devkit/build-optimizer-0.7.1.tgz#05bb646ab7cc714172fd554bd3e0e1beb7d8becc"
+"@angular-devkit/build-optimizer@0.7.2":
+  version "0.7.2"
+  resolved "http://registry.npm.taobao.org/@angular-devkit/build-optimizer/download/@angular-devkit/build-optimizer-0.7.2.tgz#c7cf86e44fa541c0e1c2133cb5be9032c3c46445"
   dependencies:
     loader-utils "^1.1.0"
     source-map "^0.5.6"
     typescript "~2.9.1"
     webpack-sources "^1.1.0"
 
-"@angular-devkit/build-webpack@0.7.1":
-  version "0.7.1"
-  resolved "http://registry.npm.taobao.org/@angular-devkit/build-webpack/download/@angular-devkit/build-webpack-0.7.1.tgz#8ad519f598f89214a132207f7f5369cc4b51d18c"
+"@angular-devkit/build-webpack@0.7.2":
+  version "0.7.2"
+  resolved "http://registry.npm.taobao.org/@angular-devkit/build-webpack/download/@angular-devkit/build-webpack-0.7.2.tgz#a10a4ea1ed5f91a281ec3df866fb9ae51842699c"
   dependencies:
-    "@angular-devkit/architect" "0.7.1"
-    "@angular-devkit/core" "0.7.1"
+    "@angular-devkit/architect" "0.7.2"
+    "@angular-devkit/core" "0.7.2"
     rxjs "^6.0.0"
 
 "@angular-devkit/core@0.6.8":
@@ -97,9 +97,9 @@
     rxjs "^6.0.0"
     source-map "^0.5.6"
 
-"@angular-devkit/core@0.7.1", "@angular-devkit/core@^0.7.1":
-  version "0.7.1"
-  resolved "http://registry.npm.taobao.org/@angular-devkit/core/download/@angular-devkit/core-0.7.1.tgz#a8c2ef8cca34d6918ebe618317fee5b0ec84a1e9"
+"@angular-devkit/core@0.7.2", "@angular-devkit/core@^0.7.2":
+  version "0.7.2"
+  resolved "http://registry.npm.taobao.org/@angular-devkit/core/download/@angular-devkit/core-0.7.2.tgz#f86c65c70daa8fccf67f4f5767a4ade7a5975caf"
   dependencies:
     ajv "~6.4.0"
     chokidar "^2.0.3"
@@ -113,22 +113,22 @@
     "@angular-devkit/core" "0.6.8"
     rxjs "^6.0.0"
 
-"@angular-devkit/schematics@0.7.1", "@angular-devkit/schematics@^0.7.1":
-  version "0.7.1"
-  resolved "http://registry.npm.taobao.org/@angular-devkit/schematics/download/@angular-devkit/schematics-0.7.1.tgz#4b805c66e38f09553ee953e4c81f993432a582fe"
+"@angular-devkit/schematics@0.7.2", "@angular-devkit/schematics@^0.7.2":
+  version "0.7.2"
+  resolved "http://registry.npm.taobao.org/@angular-devkit/schematics/download/@angular-devkit/schematics-0.7.2.tgz#809d62a264265cf345228aabead42695aa96dc64"
   dependencies:
-    "@angular-devkit/core" "0.7.1"
+    "@angular-devkit/core" "0.7.2"
     rxjs "^6.0.0"
 
-"@angular/cli@^6.0.8":
-  version "6.1.1"
-  resolved "http://registry.npm.taobao.org/@angular/cli/download/@angular/cli-6.1.1.tgz#a5d56ad2fbff71bead6b62d0000b1dda4099613d"
+"@angular/cli@^6.1.2":
+  version "6.1.2"
+  resolved "http://registry.npm.taobao.org/@angular/cli/download/@angular/cli-6.1.2.tgz#febc2635173ff7d6e3dc6744b4df49459e6f13d6"
   dependencies:
-    "@angular-devkit/architect" "0.7.1"
-    "@angular-devkit/core" "0.7.1"
-    "@angular-devkit/schematics" "0.7.1"
-    "@schematics/angular" "0.7.1"
-    "@schematics/update" "0.7.1"
+    "@angular-devkit/architect" "0.7.2"
+    "@angular-devkit/core" "0.7.2"
+    "@angular-devkit/schematics" "0.7.2"
+    "@schematics/angular" "0.7.2"
+    "@schematics/update" "0.7.2"
     opn "^5.3.0"
     rxjs "^6.0.0"
     semver "^5.1.0"
@@ -150,9 +150,9 @@
     reflect-metadata "^0.1.2"
     tsickle "^0.30.0"
 
-"@angular/compiler@^6.1.0":
-  version "6.1.0"
-  resolved "http://registry.npm.taobao.org/@angular/compiler/download/@angular/compiler-6.1.0.tgz#b945439fb3cf6a33d297fcb9a08e487f196de901"
+"@angular/compiler@^6.1.1":
+  version "6.1.1"
+  resolved "http://registry.npm.taobao.org/@angular/compiler/download/@angular/compiler-6.1.1.tgz#ad0d638559448499834ad3cf45bc2aa03a6b4f14"
   dependencies:
     tslib "^1.9.0"
 
@@ -174,9 +174,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/language-service@^6.1.0":
-  version "6.1.0"
-  resolved "http://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-6.1.0.tgz#3c73ee95acb5d1b74319d81b01e02701bbd1f539"
+"@angular/language-service@^6.1.1":
+  version "6.1.1"
+  resolved "http://registry.npm.taobao.org/@angular/language-service/download/@angular/language-service-6.1.1.tgz#131a320be957a02dcf710d9242bd8e43b7c24c3c"
 
 "@angular/platform-browser-dynamic@^6.1.0":
   version "6.1.0"
@@ -196,23 +196,29 @@
   dependencies:
     tslib "^1.9.0"
 
-"@ionic-native/core@^4.10.1":
-  version "4.10.1"
-  resolved "http://registry.npm.taobao.org/@ionic-native/core/download/@ionic-native/core-4.10.1.tgz#ae3636e4037cb079c4263cfdb9db4252166dd76e"
-
-"@ionic-native/splash-screen@^4.10.1":
-  version "4.10.1"
-  resolved "http://registry.npm.taobao.org/@ionic-native/splash-screen/download/@ionic-native/splash-screen-4.10.1.tgz#38f548c65cd0f895224a48516e085bcdf1dacceb"
-
-"@ionic-native/status-bar@^4.10.1":
-  version "4.10.1"
-  resolved "http://registry.npm.taobao.org/@ionic-native/status-bar/download/@ionic-native/status-bar-4.10.1.tgz#cee760afee19d2d60a86c48ca90a8ebbab1f6f32"
-
-"@ionic/angular@^4.0.0-beta.0":
-  version "4.0.0-beta.0"
-  resolved "http://registry.npm.taobao.org/@ionic/angular/download/@ionic/angular-4.0.0-beta.0.tgz#11829501ee1e4ced9eaee2c3c7a6057d914e0990"
+"@ionic-native/core@^5.0.0-beta.14":
+  version "5.0.0-beta.14"
+  resolved "http://registry.npm.taobao.org/@ionic-native/core/download/@ionic-native/core-5.0.0-beta.14.tgz#390d65c8bdfec21845e818bb68816d2843c5e350"
   dependencies:
-    "@ionic/core" "4.0.0-beta.0"
+    "@types/cordova" latest
+
+"@ionic-native/splash-screen@^5.0.0-beta.14":
+  version "5.0.0-beta.14"
+  resolved "http://registry.npm.taobao.org/@ionic-native/splash-screen/download/@ionic-native/splash-screen-5.0.0-beta.14.tgz#a8f436236b1984b23bea34820db029e1464eba8d"
+  dependencies:
+    "@types/cordova" latest
+
+"@ionic-native/status-bar@^5.0.0-beta.14":
+  version "5.0.0-beta.14"
+  resolved "http://registry.npm.taobao.org/@ionic-native/status-bar/download/@ionic-native/status-bar-5.0.0-beta.14.tgz#196e0d43256266986bd7b9eaf3fd974cadbce88d"
+  dependencies:
+    "@types/cordova" latest
+
+"@ionic/angular@^4.0.0-beta.1":
+  version "4.0.0-beta.1"
+  resolved "http://registry.npm.taobao.org/@ionic/angular/download/@ionic/angular-4.0.0-beta.1.tgz#376e16a521bcff4823c182b0438f9898a7a424fc"
+  dependencies:
+    "@ionic/core" "4.0.0-beta.1"
 
 "@ionic/app-scripts@^3.1.11":
   version "3.1.11"
@@ -245,9 +251,9 @@
     ws "3.3.2"
     xml2js "^0.4.19"
 
-"@ionic/cli-framework@1.0.0":
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/@ionic/cli-framework/download/@ionic/cli-framework-1.0.0.tgz#9acc214e6b1480d1c5e231fc8bc6cc356b18bd70"
+"@ionic/cli-framework@1.0.2":
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/@ionic/cli-framework/download/@ionic/cli-framework-1.0.2.tgz#c75dd95f9e61aa53556c414b6e038c47a9bc6d8b"
   dependencies:
     "@types/cross-spawn" "^6.0.0"
     "@types/debug" "0.0.30"
@@ -282,17 +288,17 @@
     wrap-ansi "^3.0.1"
     write-file-atomic "^2.3.0"
 
-"@ionic/core@4.0.0-beta.0":
-  version "4.0.0-beta.0"
-  resolved "http://registry.npm.taobao.org/@ionic/core/download/@ionic/core-4.0.0-beta.0.tgz#44905a763975b222218dd08fbb6a446d841c487e"
+"@ionic/core@4.0.0-beta.1":
+  version "4.0.0-beta.1"
+  resolved "http://registry.npm.taobao.org/@ionic/core/download/@ionic/core-4.0.0-beta.1.tgz#90173c466083e394615eaae6cd1e9795a6bda079"
   dependencies:
-    ionicons "4.2.5"
+    ionicons "4.2.6"
 
-"@ionic/ng-toolkit@^1.0.0":
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/@ionic/ng-toolkit/download/@ionic/ng-toolkit-1.0.0.tgz#d74fe5a8c2ce2e4fe24621f3ac01391a505db863"
+"@ionic/ng-toolkit@^1.0.2":
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/@ionic/ng-toolkit/download/@ionic/ng-toolkit-1.0.2.tgz#3ea420f98de5f8bd9dbc46d8d89f4eb961063d54"
   dependencies:
-    "@ionic/cli-framework" "1.0.0"
+    "@ionic/cli-framework" "1.0.2"
     chalk "^2.3.0"
     debug "^3.1.0"
     rxjs "^6.2.0"
@@ -334,11 +340,11 @@
   version "6.0.1"
   resolved "http://registry.npm.taobao.org/@ngrx/store/download/@ngrx/store-6.0.1.tgz#02c806ce20c698b997e81f5671e0edc07d32cf86"
 
-"@ngtools/webpack@6.1.1":
-  version "6.1.1"
-  resolved "http://registry.npm.taobao.org/@ngtools/webpack/download/@ngtools/webpack-6.1.1.tgz#dcfea287c0c1358f3e123621c65b0e3ccaab5b70"
+"@ngtools/webpack@6.1.2":
+  version "6.1.2"
+  resolved "http://registry.npm.taobao.org/@ngtools/webpack/download/@ngtools/webpack-6.1.2.tgz#83d5af4af0e6186a35f83a48b10a7549c39b3236"
   dependencies:
-    "@angular-devkit/core" "0.7.1"
+    "@angular-devkit/core" "0.7.2"
     rxjs "^6.0.0"
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
@@ -355,25 +361,28 @@
     "@angular-devkit/schematics" "0.6.8"
     typescript ">=2.6.2 <2.8"
 
-"@schematics/angular@0.7.1":
-  version "0.7.1"
-  resolved "http://registry.npm.taobao.org/@schematics/angular/download/@schematics/angular-0.7.1.tgz#29db78d148d3260e9bb545c86a4c6bfbaed9e933"
+"@schematics/angular@0.7.2":
+  version "0.7.2"
+  resolved "http://registry.npm.taobao.org/@schematics/angular/download/@schematics/angular-0.7.2.tgz#f51f9391519050aabd43752cb97c28d878d69990"
   dependencies:
-    "@angular-devkit/core" "0.7.1"
-    "@angular-devkit/schematics" "0.7.1"
+    "@angular-devkit/core" "0.7.2"
+    "@angular-devkit/schematics" "0.7.2"
     typescript ">=2.6.2 <2.8"
 
-"@schematics/update@0.7.1":
-  version "0.7.1"
-  resolved "http://registry.npm.taobao.org/@schematics/update/download/@schematics/update-0.7.1.tgz#56cf82df0bf8f5a0ef75aef94b7a9bc9598d7f51"
+"@schematics/update@0.7.2":
+  version "0.7.2"
+  resolved "http://registry.npm.taobao.org/@schematics/update/download/@schematics/update-0.7.2.tgz#2d2db1e1235ba44d309529292373a5d0ff23e352"
   dependencies:
-    "@angular-devkit/core" "0.7.1"
-    "@angular-devkit/schematics" "0.7.1"
+    "@angular-devkit/core" "0.7.2"
+    "@angular-devkit/schematics" "0.7.2"
     npm-registry-client "^8.5.1"
-    rc "^1.2.8"
     rxjs "^6.0.0"
     semver "^5.3.0"
     semver-intersect "^1.1.2"
+
+"@types/cordova@latest":
+  version "0.0.34"
+  resolved "http://registry.npm.taobao.org/@types/cordova/download/@types/cordova-0.0.34.tgz#ea7addf74ecec3d7629827a0c39e2c9addc73d04"
 
 "@types/cross-spawn@^6.0.0":
   version "6.0.0"
@@ -760,7 +769,7 @@ acorn@^4.0.3:
   version "4.0.13"
   resolved "http://registry.npm.taobao.org/acorn/download/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
-acorn@^5.0.0, acorn@^5.2.1:
+acorn@^5.0.0, acorn@^5.2.1, acorn@^5.3.0:
   version "5.7.1"
   resolved "http://registry.npm.taobao.org/acorn/download/acorn-5.7.1.tgz#f095829297706a7c9776958c0afc8930a9b9d9d8"
 
@@ -1238,6 +1247,14 @@ better-assert@~1.0.0:
   dependencies:
     callsite "1.0.0"
 
+bfj-node4@^5.2.0:
+  version "5.3.1"
+  resolved "http://registry.npm.taobao.org/bfj-node4/download/bfj-node4-5.3.1.tgz#e23d8b27057f1d0214fc561142ad9db998f26830"
+  dependencies:
+    bluebird "^3.5.1"
+    check-types "^7.3.0"
+    tryer "^1.0.0"
+
 big.js@^3.1.3:
   version "3.2.0"
   resolved "http://registry.npm.taobao.org/big.js/download/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
@@ -1664,6 +1681,10 @@ chardet@^0.5.0:
   version "0.5.0"
   resolved "http://registry.npm.taobao.org/chardet/download/chardet-0.5.0.tgz#fe3ac73c00c3d865ffcc02a0682e2c20b6a06029"
 
+check-types@^7.3.0:
+  version "7.4.0"
+  resolved "http://registry.npm.taobao.org/check-types/download/check-types-7.4.0.tgz#0378ec1b9616ec71f774931a3c6516fad8c152f4"
+
 chokidar@^1.4.2, chokidar@^1.7.0:
   version "1.7.0"
   resolved "http://registry.npm.taobao.org/chokidar/download/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
@@ -1862,7 +1883,7 @@ combined-stream@1.0.6, combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@2.16.x, commander@^2.12.1, commander@^2.9.0, commander@~2.16.0:
+commander@2.16.x, commander@^2.12.1, commander@^2.13.0, commander@^2.9.0, commander@~2.16.0:
   version "2.16.0"
   resolved "http://registry.npm.taobao.org/commander/download/commander-2.16.0.tgz#f16390593996ceb4f3eeb020b31d78528f7f8a50"
 
@@ -2629,6 +2650,10 @@ duplexer2@~0.1.0:
   dependencies:
     readable-stream "^2.0.2"
 
+duplexer@^0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/duplexer/download/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
+
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.6.0"
   resolved "http://registry.npm.taobao.org/duplexify/download/duplexify-3.6.0.tgz#592903f5d80b38d037220541264d69a198fb3410"
@@ -3228,6 +3253,10 @@ fileset@^2.0.2:
     glob "^7.0.3"
     minimatch "^3.0.3"
 
+filesize@^3.5.11:
+  version "3.6.1"
+  resolved "http://registry.npm.taobao.org/filesize/download/filesize-3.6.1.tgz#090bb3ee01b6f801a8a8be99d31710b3422bb317"
+
 fill-range@^2.1.0:
   version "2.2.4"
   resolved "http://registry.npm.taobao.org/fill-range/download/fill-range-2.2.4.tgz#eb1e773abb056dcd8df2bfdf6af59b8b3a936565"
@@ -3705,6 +3734,13 @@ gonzales-pe@4.2.3:
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "http://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
+
+gzip-size@^4.1.0:
+  version "4.1.0"
+  resolved "http://registry.npm.taobao.org/gzip-size/download/gzip-size-4.1.0.tgz#8ae096257eabe7d69c45be2b67c448124ffb517c"
+  dependencies:
+    duplexer "^0.1.1"
+    pify "^3.0.0"
 
 handle-thing@^1.2.5:
   version "1.2.5"
@@ -4192,7 +4228,11 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/invert-kv/download/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ionicons@4.2.5, ionicons@^4.1.2:
+ionicons@4.2.6:
+  version "4.2.6"
+  resolved "http://registry.npm.taobao.org/ionicons/download/ionicons-4.2.6.tgz#ee08270fe54c82a3ee0a672c7eb862808868dc0b"
+
+ionicons@^4.1.2:
   version "4.2.5"
   resolved "http://registry.npm.taobao.org/ionicons/download/ionicons-4.2.5.tgz#1665e8e08458ffa1a74aaf9f33ed00bce65f1a3c"
 
@@ -5936,6 +5976,10 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
+opener@^1.4.3:
+  version "1.4.3"
+  resolved "http://registry.npm.taobao.org/opener/download/opener-1.4.3.tgz#5c6da2c5d7e5831e8ffa3964950f8d6674ac90b8"
+
 opn@^5.1.0, opn@^5.3.0:
   version "5.3.0"
   resolved "http://registry.npm.taobao.org/opn/download/opn-5.3.0.tgz#64871565c863875f052cfdf53d3e3cb5adb53b1c"
@@ -6660,7 +6704,7 @@ raw-loader@^0.5.1:
   version "0.5.1"
   resolved "http://registry.npm.taobao.org/raw-loader/download/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
 
-rc@^1.2.7, rc@^1.2.8:
+rc@^1.2.7:
   version "1.2.8"
   resolved "http://registry.npm.taobao.org/rc/download/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
   dependencies:
@@ -8250,6 +8294,10 @@ trough@^1.0.0:
   dependencies:
     glob "^6.0.4"
 
+tryer@^1.0.0:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/tryer/download/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
+
 tsickle@^0.30.0:
   version "0.30.0"
   resolved "http://registry.npm.taobao.org/tsickle/download/tsickle-0.30.0.tgz#7941146ae92933854a8742fa1047606c4536649b"
@@ -8739,6 +8787,23 @@ webdriver-manager@^12.0.6:
     semver "^5.3.0"
     xml2js "^0.4.17"
 
+webpack-bundle-analyzer@^2.13.1:
+  version "2.13.1"
+  resolved "http://registry.npm.taobao.org/webpack-bundle-analyzer/download/webpack-bundle-analyzer-2.13.1.tgz#07d2176c6e86c3cdce4c23e56fae2a7b6b4ad526"
+  dependencies:
+    acorn "^5.3.0"
+    bfj-node4 "^5.2.0"
+    chalk "^2.3.0"
+    commander "^2.13.0"
+    ejs "^2.5.7"
+    express "^4.16.2"
+    filesize "^3.5.11"
+    gzip-size "^4.1.0"
+    lodash "^4.17.4"
+    mkdirp "^0.5.1"
+    opener "^1.4.3"
+    ws "^4.0.0"
+
 webpack-core@^0.6.8:
   version "0.6.9"
   resolved "http://registry.npm.taobao.org/webpack-core/download/webpack-core-0.6.9.tgz#fc571588c8558da77be9efb6debdc5a3b172bdc2"
@@ -8984,6 +9049,13 @@ ws@3.3.2:
     async-limiter "~1.0.0"
     safe-buffer "~5.1.0"
     ultron "~1.1.0"
+
+ws@^4.0.0:
+  version "4.1.0"
+  resolved "http://registry.npm.taobao.org/ws/download/ws-4.1.0.tgz#a979b5d7d4da68bf54efe0408967c324869a7289"
+  dependencies:
+    async-limiter "~1.0.0"
+    safe-buffer "~5.1.0"
 
 ws@~3.3.1:
   version "3.3.3"

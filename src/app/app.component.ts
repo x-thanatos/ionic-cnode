@@ -1,23 +1,25 @@
 import { Component, OnInit } from '@angular/core'
 import { MenuController, Platform } from '@ionic/angular'
-import { StatusBar } from '@ionic-native/status-bar'
-import { SplashScreen } from '@ionic-native/splash-screen'
+import { StatusBar } from '@ionic-native/status-bar/ngx'
+import { SplashScreen } from '@ionic-native/splash-screen/ngx'
 
 const TABS = [
     {
-        path: '',
-        title: '首页',
+        path: 'home',
+        label: '首页',
         icon: 'home'
     },
     {
-        path: '',
-        title: '用户',
+        path: 'user',
+        label: '用户',
         icon: 'person'
     }
 ]
 
 @Component({
-    templateUrl: 'app.component.html'
+    selector: 'app-root',
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
     tabs = TABS

@@ -1,21 +1,14 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
-    <ion-title>文章</ion-title>
-  </ion-navbar>
-  <ion-navbar color="primary">
-    <ion-searchbar [(ngModel)]="keywords"
-                   placeholder="搜索"
-                   cancelButtonText="清除"
-                   [animated]="true"
-                   [showCancelButton]="true"
-                   (ionInput)="topicList.filter(keywords)">
-    </ion-searchbar>
-  </ion-navbar>
+  <ion-title>文章</ion-title>
+  <ion-searchbar cancelButtonText="清除"
+                 placeholder="搜索"
+                 [value]="keywords"
+                 [animated]="true"
+                 [showCancelButton]="true"
+                 (ionInput)="topicList.filter(keywords)">
+  </ion-searchbar>
 </ion-header>
 
-<ion-content padding-left padding-right>
+<ion-content>
   <topic-list #list></topic-list>
 </ion-content>
