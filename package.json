@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "author": "xluobin@163.com",
   "scripts": {
-    "serve": "ng serve --host --source-map --open",
-    "serve:hmr": "ng serve --host --live-reload --hmr --source-map --open",
+    "serve": "ng serve --host --proxy-config proxy.dev.json --open",
+    "serve:hmr": "ng serve --host --live-reload --hmr --proxy-config proxy.dev.json --open",
     "build": "ng build --prod",
     "build:aot": "ng build --aot --build-optimizer --prod",
     "build:stats": "ng build --prod --stats-json",

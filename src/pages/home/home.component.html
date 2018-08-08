@@ -1,5 +1,7 @@
 <ion-header>
-  <ion-title>文章</ion-title>
+  文章
+</ion-header>
+<ion-toolbar>
   <ion-searchbar cancelButtonText="清除"
                  placeholder="搜索"
                  [value]="keywords"
@@ -7,8 +9,7 @@
                  [showCancelButton]="true"
                  (ionInput)="topicList.filter(keywords)">
   </ion-searchbar>
-</ion-header>
-
+</ion-toolbar>
 <ion-content>
   <topic-list #list></topic-list>
 </ion-content>
