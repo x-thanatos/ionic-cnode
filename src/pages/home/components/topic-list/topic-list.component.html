@@ -13,19 +13,19 @@
           <p class="mt-8">评论:{{topic.reply_count}} | 阅读:{{topic.visit_count}}</p>
         </ion-col>
         <ion-col class="status" text-center>
-          <ion-badge color="{{topic|TopicStatus: 'color'}}">{{topic|TopicStatus: 'text'}}</ion-badge>
+          <ion-badge [color]="topic|TopicStatus: 'color'">{{topic|TopicStatus: 'text'}}</ion-badge>
           <p class="mt-8">1天前</p>
         </ion-col>
       </ion-row>
     </ion-grid>
   </ion-item>
 </ion-virtual-scroll>
-<ion-infinite-scroll #infiniteScroll (ionInfinite)="_infiniteScroll($event)">
+<ion-infinite-scroll #infiniteScroll [threshold]="'100px'" (ionInfinite)="_infiniteScroll($event)">
   <ion-infinite-scroll-content [loadingSpinner]="'bubbles'"
                                [loadingText]="'加载中...'"></ion-infinite-scroll-content>
 </ion-infinite-scroll>
-<ion-fab [vertical]="'bottom'" [horizontal]="'end'" class="back" (click)="backTop()">
-  <ion-button>
-    <ion-icon [name]="'arrow-up'"></ion-icon>
-  </ion-button>
-</ion-fab>
+<!--<ion-fab [vertical]="'bottom'" [horizontal]="'end'" class="back" (click)="backTop()">-->
+  <!--<ion-button>-->
+    <!--<ion-icon [name]="'arrow-up'"></ion-icon>-->
+  <!--</ion-button>-->
+<!--</ion-fab>-->

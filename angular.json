@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
   "version": 1,
-  "defaultProject": "app",
+  "defaultProject": "ionic-cnode",
   "projects": {
-    "app": {
+    "onic-cnode": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -53,7 +53,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
-              "namedChunks": true,
+              "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": true
             }
@@ -62,19 +62,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "app:build",
+            "browserTarget": "onic-cnode:build",
             "progress": true
           },
           "configurations": {
             "production": {
-              "browserTarget": "app:build:production"
+              "browserTarget": "onic-cnode:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app:build"
+            "browserTarget": "onic-cnode:build"
           }
         },
         "test": {
@@ -117,24 +117,24 @@
         "ionic-cordova-build": {
           "builder": "@ionic/ng-toolkit:cordova-build",
           "options": {
-            "browserTarget": "app:build"
+            "browserTarget": "onic-cnode:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "app:build:production"
+              "browserTarget": "onic-cnode:build:production"
             }
           }
         },
         "ionic-cordova-serve": {
           "builder": "@ionic/ng-toolkit:cordova-serve",
           "options": {
-            "cordovaBuildTarget": "app:ionic-cordova-build",
-            "devServerTarget": "app:serve"
+            "cordovaBuildTarget": "onic-cnode:ionic-cordova-build",
+            "devServerTarget": "onic-cnode:serve"
           },
           "configurations": {
             "production": {
-              "cordovaBuildTarget": "app:ionic-cordova-build:production",
-              "devServerTarget": "app:serve:production"
+              "cordovaBuildTarget": "onic-cnode:ionic-cordova-build:production",
+              "devServerTarget": "onic-cnode:serve:production"
             }
           }
         }
@@ -148,7 +148,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "app:serve"
+            "devServerTarget": "onic-cnode:serve"
           }
         },
         "lint": {

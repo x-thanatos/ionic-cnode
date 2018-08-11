@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core'
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core'
 import { Store } from '@ngrx/store'
 import { InfiniteScroll, LoadingController } from '@ionic/angular'
 import { Subscription } from 'rxjs/internal/Subscription'
@@ -11,13 +11,15 @@ import { getSyncObservableData } from '../../../../core/util'
 
 @Component({
     selector: 'topic-list',
-    templateUrl: 'topic-list.component.html'
+    templateUrl: 'topic-list.component.html',
+    styleUrls: ['topic-list.component.scss']
 })
-export class TopicListComponent implements OnInit {
+export class TopicListComponent implements OnInit, OnDestroy {
     topics: TopicBaseModel[] = []
-    queryParam: TopicQueryModel = { page: 1, limit: 40 }
+    queryParam: TopicQueryModel = {page: 1, limit: 40}
     @ViewChild('infiniteScroll') infiniteScroll: InfiniteScroll
     private _loadTopicsSub = Subscription.EMPTY
+    private _subs = []
 
     constructor(private _loading: LoadingController,
                 private _store: Store<AppState>) {
@@ -30,6 +32,11 @@ export class TopicListComponent implements OnInit {
                 this.queryParam.page++
                 this.topics = topics
             })
+    }
+
+    ngOnDestroy() {
+        this._subs.forEach(sub => sub.unsubscribe())
+        this._loadTopicsSub.unsubscribe()
     }
 
     filter(keywords) {
@@ -45,14 +52,14 @@ export class TopicListComponent implements OnInit {
         // todo: 这里虚拟滚动组件没有对应的返回顶部API，不知道怎么返回顶部
     }
 
-    _infiniteScroll(scroll: InfiniteScroll) {
+    _infiniteScroll({target}) {
         this._loadTopicsSub.unsubscribe()
         this._loadTopicsSub = this._loadTopics()
             .pipe(debounceTime(500))
             .subscribe(topics => {
                 this.queryParam.page++
                 this.topics = topics
-                scroll.complete()
+                target.complete()
             })
     }
 

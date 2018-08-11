@@ -7,7 +7,8 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
 
 @Component({
     selector: 'topic-detail',
-    templateUrl: 'topic-detail.component.html'
+    templateUrl: 'topic-detail.component.html',
+    styleUrls: ['topic-detail.component.scss']
 })
 export class TopicDetailComponent implements OnInit, OnDestroy {
     topic: TopicDetailModel

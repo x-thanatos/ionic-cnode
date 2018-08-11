@@ -214,11 +214,11 @@
   dependencies:
     "@types/cordova" latest
 
-"@ionic/angular@^4.0.0-beta.1":
-  version "4.0.0-beta.1"
-  resolved "http://registry.npm.taobao.org/@ionic/angular/download/@ionic/angular-4.0.0-beta.1.tgz#376e16a521bcff4823c182b0438f9898a7a424fc"
+"@ionic/angular@^4.0.0-beta.2":
+  version "4.0.0-beta.2"
+  resolved "http://registry.npm.taobao.org/@ionic/angular/download/@ionic/angular-4.0.0-beta.2.tgz#7d4fdbd2a0b680983f80295e9a67550ed1b5922f"
   dependencies:
-    "@ionic/core" "4.0.0-beta.1"
+    "@ionic/core" "4.0.0-beta.2"
 
 "@ionic/app-scripts@^3.1.11":
   version "3.1.11"
@@ -288,11 +288,11 @@
     wrap-ansi "^3.0.1"
     write-file-atomic "^2.3.0"
 
-"@ionic/core@4.0.0-beta.1":
-  version "4.0.0-beta.1"
-  resolved "http://registry.npm.taobao.org/@ionic/core/download/@ionic/core-4.0.0-beta.1.tgz#90173c466083e394615eaae6cd1e9795a6bda079"
+"@ionic/core@4.0.0-beta.2":
+  version "4.0.0-beta.2"
+  resolved "http://registry.npm.taobao.org/@ionic/core/download/@ionic/core-4.0.0-beta.2.tgz#6059141f5d7d90031457a9194c2a7511766082e0"
   dependencies:
-    ionicons "4.2.6"
+    ionicons "4.3.0"
 
 "@ionic/ng-toolkit@^1.0.2":
   version "1.0.2"
@@ -4228,9 +4228,9 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/invert-kv/download/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
-ionicons@4.2.6:
-  version "4.2.6"
-  resolved "http://registry.npm.taobao.org/ionicons/download/ionicons-4.2.6.tgz#ee08270fe54c82a3ee0a672c7eb862808868dc0b"
+ionicons@4.3.0:
+  version "4.3.0"
+  resolved "http://registry.npm.taobao.org/ionicons/download/ionicons-4.3.0.tgz#89a7060e6bde412275a7083a029e010b66da897d"
 
 ionicons@^4.1.2:
   version "4.2.5"

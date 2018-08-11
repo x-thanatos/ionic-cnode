@@ -4,7 +4,8 @@ import { TopicReply } from '../../../../core/status-manager/home/home.model'
 
 @Component({
     selector: 'topic-comment',
-    templateUrl: 'topic-comment.component.html'
+    templateUrl: 'topic-comment.component.html',
+    styleUrls: ['topic-comment.component.scss']
 })
 export class TopicCommentComponent implements OnInit {
     @Input() comments: TopicReply[] = []
