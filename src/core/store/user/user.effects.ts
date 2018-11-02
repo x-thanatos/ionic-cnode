@@ -3,9 +3,9 @@ import { Actions, Effect } from '@ngrx/effects'
 import { Storage } from '@ionic/storage'
 import { UserActionEnums, UserActions } from './user.actions'
 import { UserService } from './user.service'
-import { DATABASE_KEYS } from '../../util'
 import { catchError, map, switchMap } from 'rxjs/operators'
 import { of } from 'rxjs/internal/observable/of'
+import { DATABASE_KEYS } from '../../core-constant'
 
 @Injectable()
 export class UserEffects {

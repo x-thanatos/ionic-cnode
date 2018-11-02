@@ -5,22 +5,13 @@
         <ion-grid class="header" [ngSwitch]="mode" no-padding>
           <ion-row justify-content-end class="operation">
             <ion-col align-self-end text-right>
-              <button ion-button
-                      icon-only
-                      class="pos-rel"
-                      clear
-                      color="light"
-                      (click)="goMessageList()">
+              <ion-button class="pos-rel" (click)="goMessageList()">
                 <ion-badge class="badge-number" color="danger">9</ion-badge>
                 <ion-icon name="mail"></ion-icon>
-              </button>
-              <button ion-button
-                      icon-only
-                      clear
-                      color="light"
-                      (click)="goSettings()">
+              </ion-button>
+              <ion-button (click)="goSettings()">
                 <ion-icon name="settings"></ion-icon>
-              </button>
+              </ion-button>
             </ion-col>
           </ion-row>
           <ion-row *ngSwitchCase="'authenticated'"
@@ -35,9 +26,9 @@
               <p>积分：{{info.score}}</p>
             </ion-col>
             <ion-col text-right>
-              <button ion-button icon-only clear color="light" (click)="goEdit()">
+              <ion-button (click)="goEdit()">
                 <ion-icon name="arrow-forward"></ion-icon>
-              </button>
+              </ion-button>
             </ion-col>
           </ion-row>
           <ion-row *ngSwitchCase="'unauthenticated'"
@@ -55,12 +46,12 @@
           <ion-row>
             <ion-col>
               <ion-list>
-                <button ion-item (click)="goRecentTopic(info.recent_topics)">
+                <ion-button (click)="goRecentTopic(info.recent_topics)">
                   <ion-icon item-start name="paw" color="danger"></ion-icon>
                   我的主题
                   <ion-badge item-right color="danger">15</ion-badge>
-                </button>
-                <button ion-item (click)="goRecentReply(info.recent_replies)">
+                </ion-button>
+                <ion-button ion-item (click)="goRecentReply(info.recent_replies)">
                   <ion-icon item-start name="chatbubbles" color="secondary"></ion-icon>
                   回复的主题
                   <ion-badge item-right
@@ -68,24 +59,24 @@
                              color="danger">
                     {{info?.recent_replies.length}}
                   </ion-badge>
-                </button>
-                <button ion-item (click)="goMarket()">
+                </ion-button>
+                <ion-button ion-item (click)="goMarket()">
                   <ion-icon item-start name="cart" color="warn"></ion-icon>
                   积分商城
-                </button>
-                <button ion-item (click)="goAbout()">
+                </ion-button>
+                <ion-button ion-item (click)="goAbout()">
                   <ion-icon item-start name="information-circle" color="primary"></ion-icon>
                   关于
                   <ion-badge item-right color="danger">new</ion-badge>
-                </button>
+                </ion-button>
               </ion-list>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col>
-              <button color="danger" ion-button full (click)="logout()">
+              <ion-button color="danger" ion-button full (click)="logout()">
                 退出登录
-              </button>
+              </ion-button>
             </ion-col>
           </ion-row>
         </ion-grid>

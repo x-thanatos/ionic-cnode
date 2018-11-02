@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { API_ADDRESS } from '../../api-address'
+import { API_ADDRESS } from '../../core-api'
 import { BasResponseModel } from '../../http-interceptor'
 import { UserInfoModel } from './user.model'
 

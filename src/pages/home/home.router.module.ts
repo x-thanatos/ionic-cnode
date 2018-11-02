@@ -5,10 +5,7 @@ import { HomeComponent } from './home.component'
 const routes: Routes = [
     {
         path: '',
-        component: HomeComponent
-    },
-    {
-        path: 'list',
+        outlet: 'home',
         component: HomeComponent
     }
 ]

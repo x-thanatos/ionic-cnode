@@ -10,7 +10,7 @@ import { MarketComponent } from './components/market/market.component'
 import { EditUserComponent } from './components/edit-user/edit-user.component'
 import { AboutComponent } from './components/about/about.component'
 import { MessageListComponent } from './components/message-list/message-list.component'
-import { ShareModule } from '../../share/share.module'
+import { UtilModule } from '../../util/util.module'
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { ShareModule } from '../../share/share.module'
     imports: [
         CommonModule,
         IonicModule,
-        ShareModule,
+        UtilModule,
         UserRouterModule
     ]
 })

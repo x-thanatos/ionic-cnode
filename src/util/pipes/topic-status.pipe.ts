@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core'
 import { TopicTabPipe } from './topic-tab.pipe'
-import { TopicBaseModel } from '../../core/status-manager/home/home.model'
+import { TopicBaseModel } from '../../core/store/home/home.model'
 
 @Pipe({
     name: 'TopicStatus'

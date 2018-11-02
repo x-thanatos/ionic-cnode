@@ -5,11 +5,9 @@ import { UserComponent } from './user.component'
 const routes: Routes = [
     {
         path: '',
+        outlet: 'user',
         component: UserComponent
     },
-    {
-        path: 'list'
-    }
 ]
 
 @NgModule({

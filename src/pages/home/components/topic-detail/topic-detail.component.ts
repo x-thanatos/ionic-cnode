@@ -1,14 +1,14 @@
 import { Component, OnDestroy, OnInit, SecurityContext } from '@angular/core'
 import { LoadingController } from '@ionic/angular'
-import { HomeService } from '../../../../core/status-manager/home/home.service'
 import { Subscription } from 'rxjs/Subscription'
-import { TopicDetailModel } from '../../../../core/status-manager/home/home.model'
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
+import { HomeService } from '../../../../core/store/home/home.service'
+import { TopicDetailModel } from '../../../../core/store/home/home.model'
 
 @Component({
     selector: 'topic-detail',
-    templateUrl: 'topic-detail.component.html',
-    styleUrls: ['topic-detail.component.scss']
+    templateUrl: './topic-detail.component.html',
+    styleUrls: ['./topic-detail.component.scss']
 })
 export class TopicDetailComponent implements OnInit, OnDestroy {
     topic: TopicDetailModel
@@ -20,10 +20,7 @@ export class TopicDetailComponent implements OnInit, OnDestroy {
     }
 
     async loading() {
-        const loader = await this._loading.create({
-            content: '加载中...',
-            duration: 0
-        })
+        const loader = await this._loading.create()
 
         return await loader.present()
     }

@@ -1,5 +1,6 @@
 import { Injectable, Provider } from '@angular/core'
 import { HttpInterceptor, HttpHandler, HttpRequest, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { API_PREFIX } from './core-api'
 
 export interface BasResponseModel<T> {
     success: boolean
@@ -9,7 +10,11 @@ export interface BasResponseModel<T> {
 @Injectable()
 class Interceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler) {
-        return next.handle(req)
+        const { url } = req
+        const request = req.clone({
+            url: `${API_PREFIX}${url}`
+        })
+        return next.handle(request)
     }
 }
 

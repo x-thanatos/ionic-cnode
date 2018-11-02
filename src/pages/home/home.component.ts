@@ -3,9 +3,9 @@ import { MenuController } from '@ionic/angular'
 import { TopicListComponent } from './components/topic-list/topic-list.component'
 
 @Component({
-    selector: 'page-home',
-    templateUrl: 'home.component.html',
-    styleUrls: ['home.component.scss']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
     keywords: string

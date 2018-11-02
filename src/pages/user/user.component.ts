@@ -4,11 +4,11 @@ import { Store } from '@ngrx/store'
 import { Storage } from '@ionic/storage'
 import { filter, switchMap, take } from 'rxjs/operators'
 import { from } from 'rxjs/internal/observable/from'
-import { AppState } from '../../core/status-manager/reducers'
-import { UserActions } from '../../core/status-manager/user/user.actions'
-import { userInfoSelector } from '../../core/status-manager/user/user.selector'
-import { SimpleReply, SimpleTopic, UserInfoModel } from '../../core/status-manager/user/user.model'
-import { DATABASE_KEYS } from '../../core/util'
+import { AppState } from '../../core/store/reducers'
+import { UserActions } from '../../core/store/user/user.actions'
+import { userInfoSelector } from '../../core/store/user/user.selector'
+import { SimpleReply, SimpleTopic, UserInfoModel } from '../../core/store/user/user.model'
+import { DATABASE_KEYS } from '../../core/core-constant'
 
 const MODE = {
     unauthenticated: 'unauthenticated',
@@ -44,7 +44,7 @@ export class UserComponent implements OnInit {
                 take(1),
                 switchMap((userInfo) => this._updateInfo())
             )
-            .subscribe(userInfo => {
+            .subscribe((userInfo: UserInfoModel) => {
                 this.info = userInfo
                 this.mode = MODE.authenticated
             })
@@ -73,18 +73,21 @@ export class UserComponent implements OnInit {
 
 
     logout() {
-        this._alert.create({
+        const options = {
             subHeader: '退出登录？',
-            enableBackdropDismiss: true,
-            buttons: [{
-                text: '取消'
-            }, {
-                text: '确定',
-                handler: () => {
-                    console.log('已经退出')
+            buttons: [
+                {
+                    text: '取消'
+                },
+                {
+                    text: '确定',
+                    handler: () => {
+                        console.log('已经退出')
+                    }
                 }
-            }]
-        })
+            ]
+        }
+        this._alert.create(options)
             .then((alert) => {
                 alert.present()
             })

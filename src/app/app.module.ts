@@ -3,12 +3,12 @@ import { RouteReuseStrategy } from '@angular/router'
 import { BrowserModule } from '@angular/platform-browser'
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular'
 import { IonicStorageModule } from '@ionic/storage'
-import { ShareModule } from '../share/share.module'
+import { StatusBar } from '@ionic-native/status-bar'
+import { SplashScreen } from '@ionic-native/splash-screen'
 import { CoreModule } from '../core/core.module'
 import { AppRouterModule } from './app.router.module'
 import { AppComponent } from './app.component'
-import { StatusBar } from '@ionic-native/status-bar'
-import { SplashScreen } from '@ionic-native/splash-screen'
+import { UtilModule } from '../util/util.module'
 
 
 const IONIC_MODULE_CONFIG = {
@@ -26,7 +26,7 @@ const IONIC_MODULE_CONFIG = {
     imports: [
         BrowserModule,
         CoreModule,
-        ShareModule,
+        UtilModule,
         IonicModule.forRoot(),
         AppRouterModule,
         IonicStorageModule.forRoot({ name: 'database' })

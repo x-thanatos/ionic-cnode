@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, SecurityContext } from '@angular/core'
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser'
-import { TopicReply } from '../../../../core/status-manager/home/home.model'
+import { TopicReply } from '../../../../core/store/home/home.model'
 
 @Component({
     selector: 'topic-comment',

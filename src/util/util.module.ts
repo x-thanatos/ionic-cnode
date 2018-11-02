@@ -17,5 +17,5 @@ const pipes = [
         ...pipes
     ]
 })
-export class ShareModule {
+export class UtilModule {
 }

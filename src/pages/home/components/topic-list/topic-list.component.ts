@@ -3,11 +3,11 @@ import { Store } from '@ngrx/store'
 import { InfiniteScroll, LoadingController } from '@ionic/angular'
 import { Subscription } from 'rxjs/internal/Subscription'
 import { debounceTime, filter, take } from 'rxjs/operators'
-import { TopicBaseModel, TopicQueryModel } from '../../../../core/status-manager/home/home.model'
-import { AppState } from '../../../../core/status-manager/reducers'
-import { HomeActions } from '../../../../core/status-manager/home/home.actions'
-import { homeTopicsSelector } from '../../../../core/status-manager/home/home.selector'
-import { getSyncObservableData } from '../../../../core/util'
+import { TopicBaseModel, TopicQueryModel } from '../../../../core/store/home/home.model'
+import { AppState } from '../../../../core/store/reducers'
+import { HomeActions } from '../../../../core/store/home/home.actions'
+import { homeTopicsSelector } from '../../../../core/store/home/home.selector'
+import { getSyncObservableData } from '../../../../util/helper'
 
 @Component({
     selector: 'topic-list',

@@ -6,7 +6,7 @@ import { TopicListComponent } from './components/topic-list/topic-list.component
 import { TopicDetailComponent } from './components/topic-detail/topic-detail.component'
 import { TopicCommentComponent } from './components/topic-comment/topic-comment.component'
 import { HomeComponent } from './home.component'
-import { ShareModule } from '../../share/share.module'
+import { UtilModule } from '../../util/util.module'
 
 @NgModule({
     declarations: [
@@ -18,7 +18,7 @@ import { ShareModule } from '../../share/share.module'
     imports: [
         CommonModule,
         IonicModule,
-        ShareModule,
+        UtilModule,
         HomeRouterModule
     ]
 })
