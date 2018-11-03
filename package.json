@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "lint": "ng lint",
-    "serve": "ng serve --host --proxy-config proxy.dev.json",
-    "serve:hmr": "ng serve --host --live-reload --hmr --proxy-config proxy.dev.json",
+    "serve": "ng serve",
+    "serve:hmr": "ng serve --live-reload --hmr",
     "build": "ng build --prod",
     "build:aot": "ng build --aot --build-optimizer --prod",
     "build:stats": "ng build --prod --stats-json",

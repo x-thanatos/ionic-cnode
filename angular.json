@@ -64,7 +64,10 @@
           "options": {
             "browserTarget": "ionic-cnode:build",
             "progress": true,
-            "port": 1700
+            "port": 1700,
+            "open": true,
+            "host": "0.0.0.0",
+            "proxyConfig": "./proxy.dev.json"
           },
           "configurations": {
             "production": {
