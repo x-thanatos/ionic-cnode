@@ -8,7 +8,7 @@ export interface BasResponseModel<T> {
 }
 
 @Injectable()
-class Interceptor implements HttpInterceptor {
+export class Interceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler) {
         const { url } = req
         const request = req.clone({

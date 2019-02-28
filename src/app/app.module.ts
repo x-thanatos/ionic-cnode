@@ -3,8 +3,6 @@ import { RouteReuseStrategy } from '@angular/router'
 import { BrowserModule } from '@angular/platform-browser'
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular'
 import { IonicStorageModule } from '@ionic/storage'
-import { StatusBar } from '@ionic-native/status-bar'
-import { SplashScreen } from '@ionic-native/splash-screen'
 import { CoreModule } from '../core/core.module'
 import { AppRouterModule } from './app.router.module'
 import { AppComponent } from './app.component'
@@ -34,8 +32,6 @@ const IONIC_MODULE_CONFIG = {
     bootstrap: [AppComponent],
     entryComponents: [],
     providers: [
-        StatusBar,
-        SplashScreen,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     ]
 })

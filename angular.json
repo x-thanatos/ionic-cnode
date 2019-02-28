@@ -64,6 +64,7 @@
           "options": {
             "browserTarget": "ionic-cnode:build",
             "progress": true,
+            "disableHostCheck": true,
             "port": 1700,
             "open": true,
             "host": "0.0.0.0",

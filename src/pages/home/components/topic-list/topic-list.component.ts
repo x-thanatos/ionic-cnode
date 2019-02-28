@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core'
 import { Store } from '@ngrx/store'
-import { InfiniteScroll, LoadingController } from '@ionic/angular'
+import { IonInfiniteScroll, LoadingController } from '@ionic/angular'
 import { Subscription } from 'rxjs/internal/Subscription'
 import { debounceTime, filter, take } from 'rxjs/operators'
 import { TopicBaseModel, TopicQueryModel } from '../../../../core/store/home/home.model'
@@ -17,7 +17,7 @@ import { getSyncObservableData } from '../../../../util/helper'
 export class TopicListComponent implements OnInit, OnDestroy {
     topics: TopicBaseModel[] = []
     queryParam: TopicQueryModel = {page: 1, limit: 40}
-    @ViewChild('infiniteScroll') infiniteScroll: InfiniteScroll
+    @ViewChild('infiniteScroll') infiniteScroll: IonInfiniteScroll
     private _loadTopicsSub = Subscription.EMPTY
     private _subs = []
 

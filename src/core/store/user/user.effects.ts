@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Actions, Effect } from '@ngrx/effects'
+import { Actions, Effect, ofType } from '@ngrx/effects'
 import { Storage } from '@ionic/storage'
 import { UserActionEnums, UserActions } from './user.actions'
 import { UserService } from './user.service'
@@ -10,8 +10,9 @@ import { DATABASE_KEYS } from '../../core-constant'
 @Injectable()
 export class UserEffects {
     @Effect()
-    loadUserInfo$ = this._action$.ofType(UserActionEnums.LoadUserInfo)
+    loadUserInfo$ = this._action$
         .pipe(
+            ofType(UserActionEnums.LoadUserInfo),
             map((action: UserActions.LoadUserInfo) => action.payload),
             switchMap((payload) => {
                 return this._service.loadUserInfo(payload)

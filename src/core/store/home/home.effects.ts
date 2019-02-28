@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Actions, Effect } from '@ngrx/effects'
+import { Actions, Effect, ofType } from '@ngrx/effects'
 import { HomeService } from './home.service'
 import { HomeActionEnums, HomeActions } from './home.actions'
 import { catchError, map, switchMap } from 'rxjs/operators'
@@ -8,8 +8,9 @@ import { of } from 'rxjs/internal/observable/of'
 @Injectable()
 export class HomeEffects {
     @Effect()
-    loadTopics$ = this._action$.ofType(HomeActionEnums.LoadTopics)
+    loadTopics$ = this._action$
         .pipe(
+            ofType(HomeActionEnums.LoadTopics),
             map((action: HomeActions.LoadTopics) => action.payload),
             switchMap((payload) => {
                 return this._service.loadTopics(payload)

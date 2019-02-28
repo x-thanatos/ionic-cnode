@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
-import { AlertController, List } from '@ionic/angular'
+import { AlertController, IonList } from '@ionic/angular'
 import { Store } from '@ngrx/store'
 import { Storage } from '@ionic/storage'
 import { filter, switchMap, take } from 'rxjs/operators'
@@ -21,7 +21,7 @@ const MODE = {
 })
 export class UserComponent implements OnInit {
     info: UserInfoModel
-    @ViewChild(List) list: List
+    @ViewChild(IonList) list: IonList
     private _mode = MODE.unauthenticated
 
     constructor(private _storage: Storage,
